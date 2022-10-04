@@ -29,6 +29,7 @@ public class Variables {
 		//guardamos la posición de memoria del objeto
 		String cadena = "frase completa";
 		
+		//Esto es un cambio tonto del codigo para probar github
 	}
 
 }
