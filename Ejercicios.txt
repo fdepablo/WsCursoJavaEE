@@ -1,0 +1,42 @@
+Ejercio1 Coche
+--------------
+
+Hacer las clases necesarias y los objetos necesarios para crear un coche. Estructura JavaBean
+
+Ejemplo de clases:
+
+Coche
+
+    String marca
+    String tipo
+    String matricula
+    String color
+    Motor motor  ->      Motor
+                             int cv
+                             String tipoMotor
+                             double consumo
+    
+    ArrayList<Rueda> ruedas ->>>  Rueda
+                                      double pulgadas
+                                      String marca
+
+    double precio
+
+Ejercicio 2 Herencia
+--------------------
+
+Tenemos una empresa con 3 tipos de empleados:
+
+1- Programadores
+2- Jefes de equipo
+3- Directores
+
+Todos ellos van a tener un nombre, un salario y un DNI, pero luego los Jefes de equipo y los directores van a tener propiedades particulares.
+Los jefes de equipo además van a tener unos incentivos, que representan un complemento a su salario. Por otro lado, los directores van 
+a tener un numero de empleados a su cargo.
+
+Quiero que ademas los empleados se les pueda calcular el sueldo, los programadores su sueldo sera igual a su salario. Los jefes de equipo
+su sueldo sera su salario mas los incentivos, y los directores sera su salario más el numero de personas a su cargo por 100.
+
+El método Main creara varios empleados, los meterá en un array y calcular sus sueldos
+
