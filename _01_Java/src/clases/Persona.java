@@ -1,5 +1,7 @@
 package clases;
 
+import java.util.ArrayList;
+
 /*
  * Una clase es un molde para crear objetos en poo
  * Un objeto se define como la instancia de una clase
@@ -24,6 +26,23 @@ public class Persona {
 	
 	private String sexo;
 	
+	//Los atributos esticos no pertenecen a los objetos, pertenecen a la
+	//clase. Se puede entender como que es un atributo comun a todos
+	//los objetos
+	//Su ciclo de vida sera todo el programa
+	public static int numeroPersonas;
+	
+	//Existen tambien los bloques estaticos dentro de las clases
+	//Son muy utilies cuando no tenemos en nuestra aplicación
+	//un metodo main (es cuando creamos aplicaciones web)
+	static {
+		//Este bloque se puede poner en cualquier clase
+		//y se ejecuta antes del método main del programa
+		ArrayList<Persona> listaPersonas = new ArrayList<>();
+		listaPersonas.add(new Persona());
+		listaPersonas.add(new Persona());
+	}
+	
 	//Los metodos representan acciones que pueden hacer los objetos
 	public void presentarse() {
 		System.out.println("Hola me llamo " + nombre + ", tengo " + edad + " años y peso "
@@ -41,4 +60,23 @@ public class Persona {
 	public String getSexo() {
 		return this.sexo;
 	}
+	
+	//Tambien existen los métodos estaticos
+	public static void imprimirNumeroTotalPersonas() {
+		System.out.println("El numero de personas es " + numeroPersonas);
+		//Dentro de un metodo estatico no podemos acceder a los
+		//metodos o atributos NO estaticos, solo a los estaticos
+		//System.out.println(nombre);
+		//presentarse();
+		
+		//tampoco tiene sentido la referencia "this"
+		//This es una referencia al propio objeto
+		//this.edad = 56;
+		
+		//Lo que si puedes hacer es crear objetos
+		//Persona p = new Persona();
+		//p.edad = 45;
+	}
+	
+
 }

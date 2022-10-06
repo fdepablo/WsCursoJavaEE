@@ -70,6 +70,21 @@ public class MainPersonas {
 		p2.setSexo("Varon");
 		System.out.println(p2.getSexo());
 		p.presentarse();
+		
+		//Accedemos a los atributos estaticos a traves de la clase
+		Persona.numeroPersonas = 2;
+		//Mediante los atributos estaticos podemos aproximarnos
+		//al concepto de variables globales
+		Persona.imprimirNumeroTotalPersonas();
+		
+		//Quiero invocar el método saludar
+		MainPersonas mp = new MainPersonas();
+		mp.saludar();
+		//p.imprimirNumeroTotalPersonas();
+	}
+	
+	public void saludar() {
+		System.out.println("Buenos dias por la mañana!!! :)");
 	}
 
 }

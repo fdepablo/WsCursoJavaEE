@@ -38,6 +38,12 @@ public class MainAnimales {
 		animal.setEdad(12);
 
 		System.out.println(listaAnimales.get(0).getNombre());//Amoroso Juancho
+	
+		Animal animal2 = new Animal();
+		System.out.println(animal2.getEdad());
+		
+		Animal animal3 = new Animal("Robustiano","Trucha",4);
+		System.out.println(animal3);
 	}
 
 }
