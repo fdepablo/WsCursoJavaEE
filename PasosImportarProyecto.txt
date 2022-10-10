@@ -8,4 +8,7 @@ y seleccionar el proyecto que queráis importar. Pulsar "Finish"
 Si no apareciera para ejecutar en un sevidor web, debemos de configurar bien el proyecto.
 
 1. Properties -> Proyect Facets.
-2. En la pestaña "Runtimes" dejar solamente el tomcat. Pulsar "Aplicar y cerrar"
+2. En la pestaña "Runtimes" dejar solamente el tomcat. 
+3. Seleccionar "Dinamic web proyect"
+
+Pulsar "Aplicar y cerrar"
