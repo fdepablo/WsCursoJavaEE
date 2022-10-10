@@ -1,0 +1,45 @@
+
+1. Bajarse Tomcat (version zip) https://tomcat.apache.org/download-90.cgi
+2. Descomprimirlo
+3. Desde eclipse
+	3.1 Windows
+	3.2 Preference
+	3.3 Server
+	3.4 Runtime Enviroments
+4. Debemos de agragar al eclipse el tomcat, pulsamos en "add"
+5. Buscamos "Apache" y dentro la versión de tomcat que estemos usando y pulsamos next
+6. Debemos de buscar el directorio donde descomprimimos nuestro tomcat y pulsamos finish
+7. Debe de aparecer en la pantalla de "Runtime Enviroments" nuestro tomcat. Pulsamos "apply and close"
+8. Cambiamos a perspectiva "JEE" en caso de que lo necesitemos.
+9. Vamos a la pestaña "Servers" y pulsamos "No servers available..." para crear un nuevo server
+y seleccionamos el tomcat con la versión que hayamos instalado.
+10. Damos boton derecho sobre el tomcar y pulsamos "start". Tiene que aparecer en "console" la traza
+del tomcat y al final "Server startup in [XXX] milliseconds"
+
+Crear una aplicación web
+
+1. File -> New -> Dinamic Web Proyect
+2. Elegimos el nombre del proyecto y "finish"
+
+Aqui vamos a ver varias carpetas importantes
+
+1. Java Resurces. En esta carpeta iran todos nuestros fichero ".java"
+2. src/main/webapp. En esta carpeta irán todos nuestros recursos que queremos compartir. Podemos
+entender recurso como un fichero de texto, un fichero html, una imagen, etc.
+
+Una vez creado nuestro proyecto web, debemos de arrancar el tomcat con dicho proyecto.
+Si pulsamos boton derecho sobre nuestro servidor y elejimos "Add and Remove" podemos decir que proyectos
+web queremos meter dentro del tomcat para que los arranque. Con "add" introducimos proyectos al tomcat y 
+con "remove" los quitamos.
+
+Una vez elegido la configuración, arrancamos nuestro servidor Tomcat
+
+Para acceder a un recurso debemos de abrir un navegador y escribir una dirección de la siguiente forma
+	http://DIRECCION_IP:PUERTO/NOMBRE_RECURSO
+	
+Ejemplo para Tomcat
+	http://localhost:8080/_02_HTML/fichero1.txt
+	
+Otra manera de acceder a un recurso es boton derecho sobre el recurso >Run As> Run on Server
+
+

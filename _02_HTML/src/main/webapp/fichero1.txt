@@ -1,0 +1,3 @@
+Esto es un fichero TXT muy bonito :)
+que queremos que sea accedido por clientes a este servidor, mediante el 
+protocolo HTTP

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETIQUETAS HTML5</title>
+</head>
+<body>
+    <!--
+        Etiquetas Semánticas HTML5
+        --------------------------
+
+        HTML5 incorpora nuevas etiquetas denominadas etiquetas semánticas. Estas etiquetas no 
+        tienen contrapartida visual, actúan como capas contenedoras igual que la etiqueta <div>. 
+        Lo que las diferencia de las etiquetas <div> es que sirven para informar sobre el tipo de 
+        contenido que soporta.
+
+            1) <header>. Cabecera de la página. Normalmente contendrá el logotipo y título.
+
+            2) <nav>. Área de navegación. Normalmente contendrá enlaces, menús o botones con vínculos.
+
+            3) <section>. Una sección dentro de la página que podrá estar dividida en artículos.
+                Ej: Seccion noticias nacionales
+
+            4) <article>. Un artículo de una sección.
+                Ej: Hombre muerde a perro, pues resulta que un hombre el otro dia...
+
+            5) <aside>. Área de banners o publicidad.
+
+            6) <footer>. Pie de página. Podemos encontrar, enlaces de contacto, enlaces de redes sociales..
+
+            7) <main>. Representa el contenido principal del <body>. Contiene la información
+                más importante de la página web, normalmente agrupa <section>
+
+        Antes de estas etiquetas se usaban "div" con un id describiendo el tipo de contenido
+        que iba a soportar, ej:
+
+            <div id="cabecera"></div>
+            <div id="pie_de_pagina"></div>
+            <div id="navegacion"></div>
+        
+        El uso de las etiquetas semánticas nos ayuda a posicionar mejor nuestra web en los 
+        buscadores, ya que los motores de búsqueda sabrán el tipo de contenido que encierran 
+        y darán más peso a unas áreas que a otras. Por ejemplo, para los motores de búsqueda 
+        tiene más peso el texto incluido en el encabezado del área de navegación que el texto 
+        del resto de la página.
+
+        Más adelante con CSS haremos algún ejemplo de estilos para estas etiquetas.
+    -->
+    <header style="text-align: center;">
+        <h1>Esta es la cabecera de mi pagina web</h1>
+    </header>
+
+    <!-- Ejemplo de como se hacia antes de HTML5
+    <div id="header" style="text-align: center;">
+        <h1>Esta es la cabecera de mi pagina web</h1>
+    </div>
+    -->
+    <nav>
+        <a href="http://www.elpais.es">Ir al ElPais!</a>
+        <a href="http://www.google.es">Ir a Google!!</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Esta es la seccion noticias nacionales</h2>
+            <article>
+                <h3>Hombre muerde a perro</h3>
+                <p>Un hombre ha mordido a un perro ¡¡¡OMG!!!</p>
+            </article>
+            <article>
+                <h3>Politicos trabajando en el congreso!!</h3>
+                <p>Han pillado a politicos fuera de la cafeteria</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Esta es la seccion noticias Internacionales</h2>
+            <article>
+                <h3>Escandalo en las elecciones EEUU!!</h3>
+                <p>El pato Donald sale elegido por el 50% de los votos</p>
+            </article>
+            <article>
+                <h3>Polemica en la embajada de Laos</h3>
+                <p>Se acabo el helado de vainilla</p>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <img id="fotoDIV" src="img/Maquetacion.png" />
+    </aside>
+
+    <footer>
+        <p>Todos los derechos reservados! copyright 2021 &copy;</p>
+    </footer>
+</body>
+</html>
