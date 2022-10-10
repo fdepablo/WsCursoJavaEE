@@ -1,0 +1,11 @@
+
+Para importar proyecto web o proyecto Java
+
+1. File -> Import -> General -> Existing proyect into workspace. Pulsamos "next"
+2. Pulsar "Browse" para ir al workspace donde tengais el proyecto (normalmente, mi workspace)
+y seleccionar el proyecto que queráis importar. Pulsar "Finish"
+
+Si no apareciera para ejecutar en un sevidor web, debemos de configurar bien el proyecto.
+
+1. Properties -> Proyect Facets.
+2. En la pestaña "Runtimes" dejar solamente el tomcat. Pulsar "Aplicar y cerrar"
