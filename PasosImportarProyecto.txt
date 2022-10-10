@@ -11,4 +11,6 @@ Si no apareciera para ejecutar en un sevidor web, debemos de configurar bien el 
 2. En la pestaña "Runtimes" dejar solamente el tomcat. 
 3. Seleccionar "Dinamic web proyect"
 
+Ver imagen "FacetProyect_ImportarProyectoJava.PNG"
+
 Pulsar "Aplicar y cerrar"
