@@ -40,3 +40,14 @@ su sueldo sera su salario mas los incentivos, y los directores sera su salario m
 
 El método Main creara varios empleados, los meterá en un array y calcular sus sueldos
 
+Ejercicio 3 Web y HTML
+----------------------
+
+Hacer un proyecto web que tenga 2 paginas HTML
+
+1- La primera página tendrá un bienvenida (usar las etiquetas HTML que consideréis). Tiene que salir al menos el usuarioi
+y la bienvenida. Además esta pagina tendra un acceso a la siguiente página
+2- Quiero que mostréis una tabla con una lista de libros/Videojuegos/peliculas que queráis. Se mostraran 5 datos
+de cada entidad. Además tendrá un enlace a la página anterior
+
+
