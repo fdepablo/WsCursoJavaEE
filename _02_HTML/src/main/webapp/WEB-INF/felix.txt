@@ -1,0 +1,4 @@
+hola, este fichero es inaccesible :(
+
+Todo lo que este en la carpeta WEB-INF y META-INF no se puede acceder 
+desde fuera, ej. un navegador web

@@ -22,7 +22,7 @@
         método no es recomendable si los datos son confidenciales. Con el valor "post" los datos se 
         envían en el cuerpo de la petición HTTP (body), por lo que no serán visibles en la URL.
     -->
-    <form action="procesarPeticion.jsp" method="get">
+    <form action="procesarPeticionServlet" method="get">
         <!--
             <fieldset> Genera un marco visible que encierra los datos del formulario.
             <legend> Colocado inmediatamente después de una etiqueta <fieldset>, permite colocarle 
@@ -42,7 +42,7 @@
 
                 1) type: tipo de campo. El valor más usual es text (caja de texto).
 
-                2) name: el nombre de este atributo. Será el que usará el servidor para 
+                2) name: el nombre de este parametro. Será el que usará el servidor para 
                 recuperar el valor del campo. Será como se enviará al servidor con la pareja
                 "name=value"
 
@@ -87,9 +87,15 @@
             <br />	
             <input type="radio" name="estado_civil" value="S" />Soltero<br />	
             <input type="radio" name="estado_civil" value="C" />Casado<br />	
-            <input type="radio" name="estado_civil" value="V" checked/>Viudo<br />	
+            <input type="radio" name="estado_civil" value="V" />Viudo<br />	
             <input type="radio" name="estado_civil" value="D" />Divorciado<br />	
 
+			<br />
+			<label for="rango_edad">Seleccione su rango de edad: </label>
+            <br />	
+            <input type="radio" name="rango_edad" value="1" />10-20<br />	
+            <input type="radio" name="rango_edad" value="2" />21-40<br />	
+            <input type="radio" name="rango_edad" value="3" checked/>41-60<br />	
             <!--
                 input type="checkbox", Similar a type="radio" pero esta vez se permite seleccionar
                 varias opciones.
