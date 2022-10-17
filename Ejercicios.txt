@@ -50,4 +50,18 @@ y la bienvenida. Además esta pagina tendra un acceso a la siguiente página
 2- Quiero que mostréis una tabla con una lista de libros/Videojuegos/peliculas que queráis. Se mostraran 5 datos
 de cada entidad. Además tendrá un enlace a la página anterior
 
+Ejercicio 4 Servlets
+--------------------
+Hacer un proyecto web con versión de despliegue 2.5. La web tendrá lo siguiente:
+
+1- Una pagina html que tenga 2 cajas de texto para poner 2 numeros. Enviara la información de los 2 numeros a un
+Servlet cuya misión será sumar ambos numeros. 
+2- El servlet generará un pagina html resultante, mostrando la suma de ambos numeros dentro de textos resaltados
+(h1)
+
+3- Tambien se mandará información desde la primera página del nombre y los apellidos de que solicita la operación, y 
+en la página resultante se mostrán ambos datos en color rojo (optitivo).
+
+
+
 

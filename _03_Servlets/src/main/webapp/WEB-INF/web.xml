@@ -3,16 +3,60 @@
   <display-name>_03_Servlets</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>bienvenido.html</welcome-file>
   </welcome-file-list>
   
+  <!-- Con la etiqueta servlet estamos diciendo que queremos dar de alta
+  un objeto de tipo PrimerServlet en el contexto de Tomcat -->
   <servlet>
     <display-name>PrimerServlet</display-name>
     <servlet-name>PrimerServlet</servlet-name>
     <servlet-class>servlet.PrimerServlet</servlet-class>
   </servlet>
   
+  <!-- Con etiqueta servlet mapping estamos diciendo con que recurso o 
+  URL estamos mapeando un servlet -->
   <servlet-mapping>
     <servlet-name>PrimerServlet</servlet-name>
     <url-pattern>/PrimerServlet</url-pattern>
   </servlet-mapping>
+  
+  <!-- Importante, siempre que cambies el web.xml debemos de reiniciar
+  el servidor -->
+  <servlet>
+    <description></description>
+    <display-name>OtroServlet</display-name>
+    <servlet-name>OtroServlet</servlet-name>
+    <servlet-class>servlet.OtroServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OtroServlet</servlet-name>
+    <url-pattern>/melainvento</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Con la etiqueta  load-on-startup, podemos decir al Tomcat cuando
+  queremos crear el Servlet sin necesidad de esperar a que se haga la petición,
+  es decir, se creará al arranque del servidor
+  El valor representa el orden de carga del Servlet
+  -->
+  <servlet>
+  	<servlet-name>ServletBasico</servlet-name>
+  	<servlet-class>servlet.ServletBasico</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ServletBasico</servlet-name>
+  	<url-pattern>/ServletBasicoCreadoPorMi</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+  	<servlet-name>ServletGenerico</servlet-name>
+  	<servlet-class>servlet.ServletGenerico</servlet-class>
+  	<load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ServletGenerico</servlet-name>
+  	<url-pattern>/ServletGenericoCreadoPorMi</url-pattern>
+  </servlet-mapping>  
 </web-app>

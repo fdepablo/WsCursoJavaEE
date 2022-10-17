@@ -15,16 +15,29 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class PrimerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	
+	
+	@Override
+	public void init() throws ServletException {
+		System.out.println("init -> Arranando el Servlet, PrimerServlet");
+	}
+
+	private int contador = 0;
 
 	//Este método se ejecutará cuando llegue una petición GET al servlet
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//Con response.getWriter acdedemos a escribir en el body del mensaje HTTP
-		response.getWriter().append("Entrando por doGet");
+		//Con response.getWriter accedemos a escribir en el body del mensaje HTTP
+		contador++;
+		response.getWriter().append("Entrando por doGet, contador: " + contador);
 	}
 
 	//Este método se ejecutará cuando llegue una petición POST al servlet
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Entrando por doPost");
+		contador++;
+		response.getWriter().append("Entrando por doPost,  contador: " + contador);
 	}
+	
+	
 
 }
