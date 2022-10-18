@@ -26,6 +26,8 @@ public class PrimerServlet extends HttpServlet {
 	//El objeto HttpServletResponse va a contener toda la información relativa
 	//a la respuest del cliente
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Entrando en el servidor");
+		
 		PrintWriter pw = response.getWriter();
 		
 		//El problema de los HTML es que son estaticos
@@ -54,7 +56,10 @@ public class PrimerServlet extends HttpServlet {
 		System.out.println(parametroEdad);
 		pw.append("<h1>Bienvenido Mr/Ms: " + parametroNombre);
 		pw.append("<h1>Su edad es: " + edad);
+		
 		pw.append("<form action='SegundoServlet'>");
+		//Vamos a pasar la edad al SegundoServlet en un campo oculto
+		pw.append("<input type='hidden' name='edadPersona' value='"+ parametroEdad +"'/>");
 		pw.append("<button>Pulsame</button>");
 		pw.append("</form>");
 		pw.append("</body>");

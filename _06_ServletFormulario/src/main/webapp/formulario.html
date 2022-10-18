@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<H1>Bienvenidos a el registro de usuarios</H1>
+	<!-- Siempre que mandemos un pass, mejor por post -->
+	<form action="RegistroServlet" method="get">
+		Email: <input type="email" name="email"/><br/>
+		Password: <input type="password" name="password"/><br/>
+		<p>intereses</p>
+		Cine:<input type="checkbox" name="intereses" value="cine"/><br/>
+		Videojuegos:<input type="checkbox" name="intereses" value="videojuegos"/><br/>
+		Libro:<input type="checkbox" name="intereses" value="libros"/><br/>
+		<p>sexo</p>
+		Hombre:<input type="radio" name="sexo" value="hombre"/><br/>
+		Mujer:<input type="radio" name="sexo" value="mujer"/><br/>
+		No-Binario:<input type="radio" name="sexo" value="no-binario"/><br/>
+		<input type="submit" value="Registro"/>
+	</form>
+</body>
+</html>

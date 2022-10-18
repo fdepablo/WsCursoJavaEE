@@ -40,13 +40,27 @@ public class SegundoServlet extends HttpServlet {
 		//Podemos entender el content type como la extensión de 
 		//un fichero
 		//https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-		response.setContentType("text/plain");
+		response.setContentType("text/html");
+		
+		//Accedemos a los paramtros de la request
+		//NO podemos acceder a los parametros de la request porque en este
+		//caso la request ha cambiado, el objeto request y response NO
+		//son los mismos que cuando se hizo la petición inicial al primer
+		//Servlet
+		String parametroNombre = request.getParameter("nombrePersona");
+		//Si queremos acceder a estos parametros debemos de propagarlos
+		//En este caso la edad si podemos obtenerla ya que la estamos
+		//mandando desde el primer servlet en un campo oculto
+		String parametroEdad = request.getParameter("edadPersona");
+		
 		pw.append("<html>");
 		pw.append("<head>");
 		pw.append("<title>PrimerServlet</title>");	
 		pw.append("</head>");
 		pw.append("<body>");
 		pw.append("<p>Esto seria un segundo servlet</p>");	
+		pw.append("<p>Nombre: " + parametroNombre + "</p>");	
+		pw.append("<p>Edad: " + parametroEdad + "</p>");
 		pw.append("</body>");
 		pw.append("</html>");
 	}

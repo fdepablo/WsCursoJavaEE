@@ -58,7 +58,6 @@ Hacer un proyecto web con versión de despliegue 2.5. La web tendrá lo siguient
 Servlet cuya misión será sumar ambos numeros. 
 2- El servlet generará un pagina html resultante, mostrando la suma de ambos numeros dentro de textos resaltados
 (h1)
-
 3- Tambien se mandará información desde la primera página del nombre y los apellidos de que solicita la operación, y 
 en la página resultante se mostrán ambos datos en color rojo (optitivo).
 
