@@ -69,7 +69,7 @@ Hacer un proyecto web que tenga 2 paginas JSPs
 
 	1. Nombre del cliente
 	2. Tamaño de pizza (Radio): pequeña, mediana y grande
-	3. Ingredientes: alcaparras, piña y albaricoque.
+	3. Ingredientes (CheckBox): alcaparras, piña y albaricoque.
 	4. Boton procesar -> ira a la segunda pagina jsp
 
 2- La segunda pagina mostrará todos los datos que ha elegido el cliente y calculara el precio de la pizza.
