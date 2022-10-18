@@ -61,6 +61,17 @@ Servlet cuya misión será sumar ambos numeros.
 3- Tambien se mandará información desde la primera página del nombre y los apellidos de que solicita la operación, y 
 en la página resultante se mostrán ambos datos en color rojo (optitivo).
 
+Ejercicio 5 JSPs
+----------------
+Hacer un proyecto web que tenga 2 paginas JSPs
 
+1- La primera página tendrá un formulario de un pedido de una pizzeria, con los siguientes campos:
 
+	1. Nombre del cliente
+	2. Tamaño de pizza (Radio): pequeña, mediana y grande
+	3. Ingredientes: alcaparras, piña y albaricoque.
+	4. Boton procesar -> ira a la segunda pagina jsp
 
+2- La segunda pagina mostrará todos los datos que ha elegido el cliente y calculara el precio de la pizza.
+El precio de la pizza sera de base 5-> pequeña 10->mediana 15->grande. Luego se sumara 1 euro por cada
+ingrediente. 
