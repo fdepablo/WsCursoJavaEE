@@ -75,3 +75,9 @@ Hacer un proyecto web que tenga 2 paginas JSPs
 2- La segunda pagina mostrará todos los datos que ha elegido el cliente y calculara el precio de la pizza.
 El precio de la pizza sera de base 5-> pequeña 10->mediana 15->grande. Luego se sumara 1 euro por cada
 ingrediente. 
+
+Ejercicio 6 Servlets y JSPs
+---------------------------
+Repetir el ejercicio 5 pero esta vez vamos a hacerlo suiendo el mvc visto en clase, o al menos, diferencias las
+peticiones (que se haran en el servlet) de la vista (que será en el jsp)
+
