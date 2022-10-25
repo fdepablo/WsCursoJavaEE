@@ -81,3 +81,13 @@ Ejercicio 6 Servlets y JSPs
 Repetir el ejercicio 5 pero esta vez vamos a hacerlo suiendo el mvc visto en clase, o al menos, diferencias las
 peticiones (que se haran en el servlet) de la vista (que será en el jsp)
 
+Ejercicio 7
+-----------
+Partiendo del ejericio 6 realizar los siguientes cambios
+
+1. Queremos tener un listado de las pizzas que ha pedidok el cliente.  Cada vez que pulsemos en calcular el precio 
+de la pizza vamos a meter la pizza en una lista de pizzas dentro de un atributo de session.
+
+2. En la página de mostrar el precio, vamos a mostrar tambien todas las pizzas que ha pedido el cliente. Para ello
+recorremos el array de pizzas que hemos puesto en el atributo de session mediante librerías JSTL.
+
