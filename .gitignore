@@ -130,7 +130,7 @@ local.properties
 # librerias proyectos normales
 !*/lib/*.jar
 # librerias proyectos web
-!*/WebContent/WEB-INF/lib/*.jar
+!*/src/main/webapp/WEB-INF/lib/*.jar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
