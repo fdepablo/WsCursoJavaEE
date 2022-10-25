@@ -1,0 +1,5 @@
+# Application context
+
+Hasta ahora hemos visto el contexto de request y el contexto de sessión. En este espacio podemos guardar atributos en un hashmap de tipo clave-valor, donde la clave es un String y el valor es un Object. El ciclo de vida del contexto de request dura la petición HTTP, mientras que el ciclo de vida del contexto de sesión es de 30 minutos por defecto (tomcat), o hasta que se cancele la sesión. Estos contextos están siempre asosciados a cada usuario.
+
+El último contexto que existe en una aplicación web es el **contexto de aplicación**. A diferencia de los otros contexto, este contexto se comparte por **todos los usuarios de mi aplicación**, y su ciclo de vida será desde que arrancamos el servidor hasta que lo apaguemos. De esta manera, es el contexto más amplio que existe y todo lo que guardemos dentro de este contexto será para todos los usuarios.

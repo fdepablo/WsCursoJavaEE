@@ -1,4 +1,4 @@
-# Session
+# Session Context
 
 La sesión es un mecanismo dentro de las aplicaciones cliente-servidor para mantener información durante más tiempo que en una petición request. 
 
