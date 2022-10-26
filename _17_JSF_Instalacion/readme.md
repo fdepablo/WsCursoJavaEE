@@ -1,0 +1,51 @@
+# JSF
+
+## Creaci�n de proyecto en eclipse
+
+Pasos a seguir para crear un proyecto JSF en eclipse
+
+1. Crear un proyecto web normal
+2. En propiedades del proyecto, dentro de **Proyect Faces**, marcar la opci�n de JSF 2.2
+3. Nos pide que configuremos las librer�as,  cuando tengamos que elegirlas le decimos que no queremos a�adirlas ahora (Aunque ser�a otra opci�n para configurar JSF). Elegimos la opción "Disabled library configuration".
+4. Add la runtime de tomcat dentro del **Proyect Faces**, aplicamos y aceptamos (en caso necesario)
+5. Copiar las librer�a **javax.faces.jar** en la carpeta lib del proyecto. 
+6. Agregamos el mapeo del Servlet de JSF en el fichero web.xml (en caso necesario)
+
+	<display-name>ProyectoJSF</display-name>
+	  <welcome-file-list>
+	    <welcome-file>index.html</welcome-file>
+	  </welcome-file-list>
+	  <servlet>
+	    <servlet-name>Faces Servlet</servlet-name>
+	    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+	    <load-on-startup>1</load-on-startup>
+	  </servlet>
+	  <servlet-mapping>
+	    <servlet-name>Faces Servlet</servlet-name>
+	    <url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+
+7. Creamos el fichero **faces-config.xml** dentro del directorio **WEB-INF** (en caso necesario)
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<faces-config
+	    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	    version="2.2">
+	
+	</faces-config>
+	
+7. Crear una p�gina JSF, para ello damos a new html, renombramos el html a xhtml, le damos a siguiente y ah� elegimos una plantilla de JSF, la primera opci�n de "blank JSF Page".
+8. Crear un texto de salida
+
+	<h:body>
+		<h:outputText style="color:red" value="valor"></h:outputText>
+	</h:body>
+	
+9. Ejecutamos en tomcat la página creada y si lo hemos hecho bien, debe de aparecer el mensaje
+
+## Bibliografia
+
+- <https://www.apuntesdejava.com/p/tutorial-jsf-22.html>
+- <https://docs.oracle.com/javaee/7/tutorial/jsf-intro.htm>

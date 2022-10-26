@@ -91,3 +91,12 @@ de la pizza vamos a meter la pizza en una lista de pizzas dentro de un atributo 
 2. En la página de mostrar el precio, vamos a mostrar tambien todas las pizzas que ha pedido el cliente. Para ello
 recorremos el array de pizzas que hemos puesto en el atributo de session mediante librerías JSTL.
 
+Ejercicio 8
+-----------
+
+1- Configuréis JSF en vuestro WS a partir de mi ejemplo
+
+2- Quiero que a partir del ejercicio de la pizzeria hagáis un filtro que diga cuando se ha realizado un pedido
+es decir, solo se ejecute cuando se haga la accion de pedir la pizza (por consola).
+
+3- Poner tambien mi FiltroTiempo en el ejercicio de la pizzeria. 
