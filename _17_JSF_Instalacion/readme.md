@@ -8,7 +8,7 @@ Pasos a seguir para crear un proyecto JSF en eclipse
 2. En propiedades del proyecto, dentro de **Proyect Faces**, marcar la opci�n de JSF 2.2
 3. Nos pide que configuremos las librer�as,  cuando tengamos que elegirlas le decimos que no queremos a�adirlas ahora (Aunque ser�a otra opci�n para configurar JSF). Elegimos la opción "Disabled library configuration".
 4. Add la runtime de tomcat dentro del **Proyect Faces**, aplicamos y aceptamos (en caso necesario)
-5. Copiar las librer�a **javax.faces.jar** en la carpeta lib del proyecto. 
+5. Copiar las librer�a **javax.faces.jar** en la carpeta lib del proyecto. <https://mvnrepository.com/artifact/com.sun.faces/jsf-api/2.2.20>
 6. Agregamos el mapeo del Servlet de JSF en el fichero web.xml (en caso necesario)
 
 	<display-name>ProyectoJSF</display-name>
