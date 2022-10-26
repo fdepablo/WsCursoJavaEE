@@ -1,4 +1,4 @@
-# JSLT
+# JSTL
 
 En JEE existen unas librerías muy utilizadas para evitar el uso de scriptlet en los JSPs. Estas librerías se llaman **JSTL o JavaServer Pages Standard Tag Library**.
 
