@@ -100,3 +100,14 @@ Ejercicio 8
 es decir, solo se ejecute cuando se haga la accion de pedir la pizza (por consola).
 
 3- Poner tambien mi FiltroTiempo en el ejercicio de la pizzeria. 
+
+Ejercicio 9
+-----------
+Hacer una app web con JSF que haga una calculadora. La aplicación mostrarla 2 input text en los que 
+mandaremos los numeros. Tendra un output text donde mostraremos el resultado. Tambien tendrá 4 botones
+para hacer los 4 tipos basicos de operaciones (suma, resta, multiplicación, division)
+
+Nota: JSF hace conversiones basicas de manera automatica, es decir, si una propiedad la declaramos
+como numerica, convertira el string que le llegue desde la petión HTTP al formato numerico
+
+
