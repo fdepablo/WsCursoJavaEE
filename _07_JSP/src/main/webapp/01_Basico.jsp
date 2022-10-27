@@ -23,5 +23,10 @@
 	<%
 	}
 	%>
+	
+	<%-- Los comentarios en JSP se ponen de esta manera, este tipo de comentarios
+		no los verá el cliente en el código HTML
+	--%>
+	
 </body>
 </html>

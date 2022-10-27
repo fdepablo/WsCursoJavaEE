@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<body>
+
+	<h:form>
+		<h:selectOneMenu value="#{radioManagedBean.color}">
+			<f:selectItems value="#{radioManagedBean.listaColores}"/>
+		</h:selectOneMenu>
+		<h:commandButton value="Resultado" action="resultadoMenu" />
+	</h:form>
+
+</body>
+</html>

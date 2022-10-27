@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+<h:head></h:head> 
+<h:body>
+      <h2>Ejemplo Ajax</h2>
+      <h:form>
+		  <h:panelGrid columns="2">
+		      Numero1: <h:inputText id="numero1" value="#{ajaxController.numero1}"></h:inputText>
+		      Numero2: <h:inputText id="numero2" value="#{ajaxController.numero2}"></h:inputText>
+		  </h:panelGrid>
+	      <h:commandButton value="Sumar">
+	         <f:ajax execute="numero1 numero2" render="resultado" />
+	      </h:commandButton>
+	      <h:outputText id="resultado" value="#{ajaxController.resultado}"/>
+      </h:form>
+
+</h:body>
+</html>

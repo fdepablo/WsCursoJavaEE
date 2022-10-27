@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+	
+	<h:form>
+	<h1>Tabla de personas</h1>
+	<h:dataTable value="#{dataTablePersonas.listaPersonas}" var="p">
+		<h:column>
+			<f:facet name="header">DNI</f:facet>
+			<h:outputText value="#{p.dni}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">NOMBRE</f:facet>
+			<h:outputText value="#{p.nombre}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">ELIMINAR</f:facet>
+			<h:commandButton action="#{dataTablePersonas.borrarPersona(p)}" value="Eliminar"/>
+		</h:column>
+	</h:dataTable>
+	<hr/>
+	Dni: <h:inputText value="#{persona.dni}" placeholder="Dni"/>
+	<br/>
+	Nombre: <h:inputText value="#{persona.nombre}" />
+	<br/><br/>
+	<h:commandButton action="#{dataTablePersonas.addPersona(persona)}" value="Add Persona" />
+	</h:form>
+
+</body> 
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+	<title><ui:insert name="titulo">Marcador de posición de título</ui:insert></title>
+</head>
+<h:body>
+	<ui:composition template="./template.xhtml">
+		<ui:define name="title">
+ 			Applicación JSF que usa una plantilla
+  		</ui:define>
+		<ui:define name="content">
+			<ui:include src="../_02_datatables/dataTablePersonas.xhtml"></ui:include>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

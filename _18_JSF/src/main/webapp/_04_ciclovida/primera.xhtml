@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<body>
+	<h:form>
+		Nombre:<h:inputText value="#{user.name}"></h:inputText><br/>
+		Password:<h:inputText value="#{user.pass}"></h:inputText><br/>
+		Palabra:<h:inputText value="#{intermedia.palabra}"></h:inputText><br/>
+	
+		<h:commandButton value="Siguiente pagina" action="#{intermedia.enrutar('segunda')}"></h:commandButton>
+	</h:form>
+</body>
+</html>

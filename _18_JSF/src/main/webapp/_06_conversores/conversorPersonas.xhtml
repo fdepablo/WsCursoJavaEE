@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+	<h:form>
+		<h:selectOneRadio value="#{personaController.personaEscogida}" >
+			<f:selectItems value="#{personaController.listaPersonas}"
+				var="p" itemLabel="#{p.nombre}" itemValue="#{p}" />
+			<f:converter converterId="personaConverter"/>			
+		</h:selectOneRadio>
+		<!-- Aqui no podemos hacer algo así como '{personaController.enviar()' ya que
+			no estamos dentro de una estructura repetitiva
+		-->
+		<h:commandButton action="#{personaController.enviar()}" value="Enviar" />
+	</h:form>
+</body> 
+</html>

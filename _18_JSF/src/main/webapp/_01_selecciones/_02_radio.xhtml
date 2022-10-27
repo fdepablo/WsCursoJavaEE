@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head>
+	<title>Radio</title>
+</h:head> 
+<body> 
+	<h:form>
+		<!-- 
+		Tambien podríamos usar f:selectItems con una lista como en la etiqueta del checkBox 
+		Veremos más adelante un ejemplo
+		
+		layout="pageDirection" hace que se vean los elementos en vertical
+		-->
+		<h:selectOneRadio value="#{radioManagedBean.color} " layout="pageDirection" >
+			<f:selectItem itemValue="Rojo" itemLabel="Color Rojo"/>
+			<f:selectItem itemValue="Azul" itemLabel="Color Azul"/>
+			<f:selectItem itemValue="Verde" itemLabel="Color Verde"/>
+		</h:selectOneRadio>
+		<h:commandButton value="Resultado" action="resultadoRadio" />	
+	</h:form>
+</body> 
+</html>

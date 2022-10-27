@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<head>
+	<title>Pagina usando template</title>
+</head>
+<h:body>
+	<!-- Segun la plantilla que usemos se nos mostrará de una manera o de otra -->
+	<ui:composition template="./template.xhtml">
+		<ui:define name="title">
+ 			Applicación JSF que usa una plantilla
+  		</ui:define>
+  		<ui:define name="header">
+ 			Esto es una cabecera modificada desde UsoDeTemplate
+  		</ui:define>
+		<ui:define name="content">
+			<h1>Prueba de tabla de personas</h1>
+			<h:form>
+				<h:dataTable value="#{dataTablePruebaMB.listaPersonas}" var="p">
+					<h:column>
+						<f:facet name="header">DNI</f:facet>
+						<h:outputText value="#{p.dni}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">NOMBRE</f:facet>
+						<h:outputText value="#{p.nombre}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">ELIMINAR</f:facet>
+						<h:commandButton action="#{dataTablePruebaMB.borrarPersona(p)}"
+							value="Eliminar" />
+					</h:column>
+				</h:dataTable>
+				<h:inputText value="#{persona.nombre}" />
+				<h:inputText value="#{persona.dni}" />
+				<h:commandButton action="#{dataTablePruebaMB.addPersona(persona)}"
+					value="Add Persona" />
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

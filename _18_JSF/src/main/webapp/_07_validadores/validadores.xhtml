@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+	<h:form id="formulario">
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Nombre:"/>
+			<h:inputText id="inputText1" value="#{validadoresController.texto1}" requiredMessage="Introduce algo!!" required="true">
+			</h:inputText>
+			<h:message for="inputText1" style="color:red"/>
+			
+			<h:outputLabel value="Edad:"/>
+			<h:inputText id="inputText2" value="#{validadoresController.entero1}" required="true">
+				<f:validateLongRange minimum="18" maximum="65"/>
+			</h:inputText>
+			<h:message for="inputText2" style="color:red"/>
+			
+			<h:outputLabel value="Password:"/>
+			<h:inputSecret id="password" value="#{validadoresController.password}" required="true">
+	  			<f:validateRegex pattern="[a-z][A-Z][0-9]" />
+			</h:inputSecret>
+			<h:message for="password" style="color:red"/>
+		</h:panelGrid>
+					
+		<h:commandButton action="#{validadoresController.validar()}" value="Pulsame" />
+		
+		<h:messages style="color:blue"/>
+	</h:form>
+</body> 
+</html>

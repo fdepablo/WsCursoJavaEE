@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+  	<h:form>
+		<h2>Lista de animales</h2>
+		<ui:repeat var="animal" value="#{animalController.listaAnimales}">
+			<ul>
+				<li>#{animal.nombre}</li>
+				<li>#{animal.tipoAnimal}</li>
+				<li>#{animal.edad}</li>
+			</ul>
+			<h:commandButton value="Mandar Animal completo" action="#{animalController.mandarAnimal(animal)}"></h:commandButton><br/>
+		</ui:repeat>
+  	</h:form>
+  	
+	<hr/><hr/><hr/>
+	
+	<h:form>
+		<h:selectOneRadio value="#{animalController.nombreAnimal}" layout="pageDirection" >
+			<f:selectItems var="animal" 
+					   value="#{animalController.listaAnimales}"
+					   itemValue="#{animal.nombre}"
+					   itemLabel="Nombre: #{animal.nombre}">
+					   			   
+			</f:selectItems>
+		</h:selectOneRadio>
+		
+		<h:commandButton value="Mandar nombre Animal" action="#{animalController.mandarAnimal}"></h:commandButton><br/>
+		<h:outputText value="#{animalController.nombreAnimal}"></h:outputText>
+	</h:form>
+	
+
+</body> 
+</html>

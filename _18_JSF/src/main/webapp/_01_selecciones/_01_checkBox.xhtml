@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+	<h:form>
+		<h:outputText value="#{literalesManagedBean.literalMarcado}" />
+		<h:selectBooleanCheckbox value="#{checkBoxManagedBean.marcado}" />
+		<h:commandButton value="Pulsa para seguir" action="#{checkBoxManagedBean.continuar()}" />
+		<h:outputText value="Debe marcar la casilla para continuar" rendered="#{checkBoxManagedBean.mostrarMarcar}"></h:outputText>
+		
+		<hr/>
+		
+		<h:selectManyCheckbox value="#{checkBoxManagedBean.listaFrutasSeleccionadas}">
+			<f:selectItems value="#{checkBoxManagedBean.listaCheckBox}"/>
+		</h:selectManyCheckbox>
+		
+	</h:form>
+</body> 
+</html>

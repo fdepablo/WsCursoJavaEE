@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+	<h:form>
+		<h:inputText id="fecha" value="#{fechaController.date}" 
+			converterMessage="Error de fecha!! formato esperado dd/MM/YY mm:ss">
+			<f:convertDateTime 
+				pattern="dd/MM/YY mm:ss">
+			</f:convertDateTime>
+		</h:inputText>		
+		<h:message style="color:red" for="fecha"></h:message>
+		<hr/>	
+		<h:commandButton value="Actualizar Fecha" action="#{fechaController.actualizarFecha}"></h:commandButton>
+		<hr/>	
+		
+		<h:outputText value="#{fechaController.date}">
+			<f:convertDateTime 
+				pattern="dd-MM-YYYY mm ss">
+			</f:convertDateTime>
+		</h:outputText>	
+		<br/>
+	</h:form>
+</body> 
+</html>

@@ -46,7 +46,9 @@ public class FiltroSeguridad extends HttpFilter implements Filter {
 			String ipAddress = request.getRemoteAddr();
 			System.out.println("doFilter -> IP: " + ipAddress);
 			HttpServletResponse hsResponse = (HttpServletResponse)response;
-			hsResponse.sendRedirect("/_16_FiltroSeguridad/login.jsp");
+			String error = "Tiene que registrarse para acceder al recurso";
+			hsResponse.sendRedirect("/_16_FiltroSeguridad/login.jsp?error="
+					+ error);
 		}		
 		
 		System.out.println("doFilter -> Saliendo de FiltroSeguridad");

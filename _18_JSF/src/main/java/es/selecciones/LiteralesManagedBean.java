@@ -1,0 +1,22 @@
+package es.selecciones;
+
+import java.io.Serializable;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@ManagedBean
+@SessionScoped
+public class LiteralesManagedBean implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
+	private String literalMarcado = "Marque para continuar";
+	
+	public String getLiteralMarcado() {
+		return literalMarcado;
+	}
+
+	public void setLiteralMarcado(String literalMarcado) {
+		this.literalMarcado = literalMarcado;
+	}
+}

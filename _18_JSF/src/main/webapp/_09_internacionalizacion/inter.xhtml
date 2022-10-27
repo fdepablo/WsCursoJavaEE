@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head></h:head>
+<body>
+	<h1>
+		<h:outputText value="#{mensaje['welcome']}" />
+		<!-- Si es solo una palabra podemos acceder directamente -->
+		<h:outputText value="#{mensaje.welcome}" />
+	</h1>
+
+	<hr />
+
+	<h:form>
+		<h:selectOneMenu value="#{i18nMB.idioma}">
+			<f:selectItems value="#{i18nMB.listaIdiomas}" />
+		</h:selectOneMenu>
+		<h:commandButton action="#{i18nMB.cambiarIdioma()}"
+			value="#{mensaje['button.changeLanguage']}" />
+		<hr />
+
+		<h:panelGrid columns="2">
+			<h:outputLabel value="#{mensaje['user.label']}" />
+			<h:inputText value="#{i18nMB.nombre}" />
+			
+			<h:commandButton action="#{i18nMB.validarUsuario()}"
+				value="#{mensaje.button}" />
+			<h:outputFormat value="#{mensaje['user.notfound']}"
+				rendered="#{i18nMB.errorNombre}">
+				<f:param value="#{i18nMB.nombre}" />
+			</h:outputFormat>
+		</h:panelGrid>
+	</h:form>
+</body>
+</html>

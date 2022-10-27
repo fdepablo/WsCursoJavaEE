@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+	<!-- Al igual que tenemos 'JSP EL -> ${}', aquí tenemos 
+		también 'JSF EL -> #{} (expresiones diferidas)'
+	 -->
+	<h1>Primera página JSF</h1>
+	<h:outputText value="#{holaMundo.valor}" />
+	<h:form>
+		<hr/>
+		<h:inputText value="#{holaMundo.valor}" />
+		<hr/>
+		<!-- El commandButton debe de estar dentro de un h:form 
+			el action marca la acción a ejecutar del formulario, que podemos 
+			poner:
+			1. La página que queremos ir
+			2. El metodo del MB al que queremos ir
+		-->
+		<h:commandButton action="index" value="Pulsame" />
+		<h:commandButton action="segundaPagina" value="Segunda Pagina" />
+		<h:commandButton action="#{holaMundo.enviarPagina3()}" value="Tercera Pagina" />
+		<h:commandButton action="#{holaMundo.volverMismaPagina()}" value="Misma pagina por metodo" />
+	</h:form>
+</body> 
+</html>

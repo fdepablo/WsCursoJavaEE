@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#_05_navegacion#index.xhtml"
+  PATH="/_05_navegacion/index.xhtml" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#_05_navegacion#index.xhtml:0" NAME="item"
+   PATH="/_05_navegacion/index.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="exito::#_05_navegacion#paginaPrincipal.xhtml" NAME="output"
+    PATH="/_05_navegacion/paginaPrincipal.xhtml"
+    TARGET="rules:#_05_navegacion#paginaPrincipal.xhtml" TITLE="exito" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="fallo::#_05_navegacion#error.xhtml"
+    NAME="output1" PATH="/_05_navegacion/error.xhtml"
+    TARGET="rules:#_05_navegacion#error.xhtml" TITLE="fallo" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#_05_navegacion#error.xhtml"
+  PATH="/_05_navegacion/error.xhtml" SHAPE="256,177,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#_05_navegacion#paginaPrincipal.xhtml"
+  PATH="/_05_navegacion/paginaPrincipal.xhtml" SHAPE="256,33,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

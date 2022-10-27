@@ -13,7 +13,7 @@ Pasos que seguir para crear un proyecto JSF en eclipse
 
 	<display-name>ProyectoJSF</display-name>
 	  <welcome-file-list>
-	    <welcome-file>index.html</welcome-file>
+	    <welcome-file>index.xhtml</welcome-file>
 	  </welcome-file-list>
 	  <servlet>
 	    <servlet-name>Faces Servlet</servlet-name>

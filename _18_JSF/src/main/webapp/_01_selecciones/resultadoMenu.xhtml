@@ -1,0 +1,17 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+	<h:form>
+		<h:outputText value="#{radioManagedBean.color}"></h:outputText>
+		<h:selectOneListbox value="#{radioManagedBean.color}">
+			<f:selectItems value="#{radioManagedBean.listaColores}"/>
+		</h:selectOneListbox>
+		<h:commandButton value="Ir a menu" action="_03_menu" />
+	</h:form>
+</body> 
+</html>

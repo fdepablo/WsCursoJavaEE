@@ -4,8 +4,24 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"> 
 
-<h:head></h:head> 
+<h:head>
+	<title>JSF</title>
+</h:head> 
 <h:body>
-	<h:outputText style="color:red" value="valor"></h:outputText>
+	<h1>Mi primera página JSF</h1>
+	<h:outputText style="color:red" value="valor escrito por JSF"></h:outputText>
+	<hr/>
+	<h:outputText style="color:blue" value="#{primerManageBean.saludo}" />
+	
+	<h3>Podemos mandar información a un MB pero debemos de crear un formuario JSF</h3>
+	<h:form>
+		<!-- Esto es un comentario HTML -->
+		Nombre:<h:inputText value="#{primerManageBean.nombre}" />
+		<h:commandButton action="#{primerManageBean.procesarNombre()}" value="Pulse aquí para mandar nombre" />
+		<hr/>
+		<h:commandButton action="#{primerManageBean.procesarNombre('pepe')}" value="Pulse aquí para manda'pepe'" />
+		<hr/>
+		<h:commandButton action="#{primerManageBean.procesarNombre('ana')}" value="Pulse aquí para manda'ana'" />
+	</h:form>
 </h:body>
 </html>
