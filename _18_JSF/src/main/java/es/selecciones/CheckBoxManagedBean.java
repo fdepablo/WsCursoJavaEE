@@ -11,6 +11,8 @@ public class CheckBoxManagedBean{
 	private boolean marcado = false;
 	private boolean mostrarMarcar = false;
 	
+	private List<String> listaNumerosSeleccionados;
+	
 	//Representa un array con las frutas que ha elegido un usuario
 	private List<String> listaFrutasSeleccionadas;
 	
@@ -20,12 +22,13 @@ public class CheckBoxManagedBean{
 		List<String> listaCheckBox = new ArrayList<>();
 		listaCheckBox.add("Naranja");
 		listaCheckBox.add("Platano");
-		listaCheckBox.add("PiÒa");
+		listaCheckBox.add("Pi√±a");
 		listaCheckBox.add("Manzana");
 
 		return listaCheckBox;
 	}	
 	
+	//Los boolean en notaci√≥n JavaBean, su 'get' es 'is'
 	public boolean isMarcado() {
 		return marcado;
 	}
@@ -40,7 +43,7 @@ public class CheckBoxManagedBean{
 		}else{
 			mostrarMarcar = true;
 			listaFrutasSeleccionadas = null;
-			return null;//volvemos a la p·gina actual
+			return null;//volvemos a la p√°gina actual
 		}
 	}
 
@@ -58,5 +61,13 @@ public class CheckBoxManagedBean{
 
 	public void setMostrarMarcar(boolean mostrarMarcar) {
 		this.mostrarMarcar = mostrarMarcar;
+	}
+
+	public List<String> getListaNumerosSeleccionados() {
+		return listaNumerosSeleccionados;
+	}
+
+	public void setListaNumerosSeleccionados(List<String> listaNumerosSeleccionados) {
+		this.listaNumerosSeleccionados = listaNumerosSeleccionados;
 	}
 }

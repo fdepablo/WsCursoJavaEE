@@ -4,13 +4,15 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"> 
 
-<h:head></h:head> 
+<h:head>
+</h:head> 
 <body> 
 	<!-- Al igual que tenemos 'JSP EL -> ${}', aquí tenemos 
 		también 'JSF EL -> #{} (expresiones diferidas)'
 	 -->
 	<h1>Primera página JSF</h1>
-	<h:outputText value="#{holaMundo.valor}" />
+	<h:outputText value="Esto es un valor fijo" />
+	<h:outputText value="#{holaMundo.valor}"/>
 	<h:form>
 		<hr/>
 		<h:inputText value="#{holaMundo.valor}" />
@@ -25,6 +27,13 @@
 		<h:commandButton action="segundaPagina" value="Segunda Pagina" />
 		<h:commandButton action="#{holaMundo.enviarPagina3()}" value="Tercera Pagina" />
 		<h:commandButton action="#{holaMundo.volverMismaPagina()}" value="Misma pagina por metodo" />
+	
+		<hr/>		
+		<h:commandLink action="segundaPagina" value="Segunda Pagina" />
+		<br/>
+		<h:commandLink action="#{holaMundo.enviarPagina3()}" value="Tercera Pagina" />
+		<hr/>
+		<h:graphicImage class="bat" id="imagenBatman" library="img" name="batman.jpg"/>
 	</h:form>
 </body> 
 </html>

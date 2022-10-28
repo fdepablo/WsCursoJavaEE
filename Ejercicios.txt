@@ -110,4 +110,6 @@ para hacer los 4 tipos basicos de operaciones (suma, resta, multiplicación, div
 Nota: JSF hace conversiones basicas de manera automatica, es decir, si una propiedad la declaramos
 como numerica, convertira el string que le llegue desde la petión HTTP al formato numerico
 
-
+Ejercicio 10
+------------
+Hacer el ejercicio 7 con JSF

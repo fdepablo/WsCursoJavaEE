@@ -8,7 +8,7 @@
 <body> 
   	<h:form>
 		<h2>Lista de animales</h2>
-		<ui:repeat var="animal" value="#{animalController.listaAnimales}">
+		<ui:repeat value="#{animalController.listaAnimales}" var="animal" >
 			<ul>
 				<li>#{animal.nombre}</li>
 				<li>#{animal.tipoAnimal}</li>

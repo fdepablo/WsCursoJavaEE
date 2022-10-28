@@ -2,11 +2,11 @@ package es.selecciones;
 
 import java.io.Serializable;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 
 @ManagedBean
-@SessionScoped
+@ApplicationScoped
 public class LiteralesManagedBean implements Serializable{
 	private static final long serialVersionUID = 1L;
 	

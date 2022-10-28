@@ -4,15 +4,26 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"> 
 
-<h:head></h:head> 
+<h:head>
+		<meta charset="UTF-8"/>
+</h:head> 
 <body> 
 	<h:form>
-		<h:outputText value="#{literalesManagedBean.literalMarcado}" />
-		<h:selectBooleanCheckbox value="#{checkBoxManagedBean.marcado}" />
-		<h:commandButton value="Pulsa para seguir" action="#{checkBoxManagedBean.continuar()}" />
-		<h:outputText value="Debe marcar la casilla para continuar" rendered="#{checkBoxManagedBean.mostrarMarcar}"></h:outputText>
+		<h:outputLabel for="marcado" value="#{literalesManagedBean.literalMarcado}" />
+		<h:selectBooleanCheckbox id="marcado" value="#{checkBoxManagedBean.marcado}" />
 		
 		<hr/>
+		
+		<h:commandButton value="Pulsa para seguir" action="#{checkBoxManagedBean.continuar()}" />
+		<h:outputText style="color:red" value="Debe marcar la casilla para continuar" rendered="#{checkBoxManagedBean.mostrarMarcar}"></h:outputText>
+		
+		<hr/>
+		
+		<h:selectManyCheckbox value="#{checkBoxManagedBean.listaNumerosSeleccionados}"> 
+			<f:selectItem itemValue="1" itemLabel="Numero 1" /> 
+			<f:selectItem itemValue="2" itemLabel="Numero 2" /> 
+			<f:selectItem itemValue="3" itemLabel="Numero 3" /> 
+		</h:selectManyCheckbox>		
 		
 		<h:selectManyCheckbox value="#{checkBoxManagedBean.listaFrutasSeleccionadas}">
 			<f:selectItems value="#{checkBoxManagedBean.listaCheckBox}"/>

@@ -11,7 +11,11 @@ public class DataTablePersonas {
 	private static List<Persona> listaPersonas;
 	
 	//Normalmente estos datos vienen de una base de datos
+	//Los bloques estaticos en JAVA se van a ejecutar una
+	//vez al principio del programa. Muy util cuando
+	//no tenemos un main
 	static{
+		System.out.println("Nada más arrancar se ejecuta este código");
 		listaPersonas = new ArrayList<Persona>();
 		Persona p = new Persona();
 		p.setDni("55443322");
@@ -36,6 +40,8 @@ public class DataTablePersonas {
 		return null;
 	}
 	
+	//Mediante la inyección de dependencias estamos inyectando
+	//el managed bean de tipo Persona a este método
 	public String addPersona(Persona p){
 		System.out.println("Persona: "+p.getNombre() + " " + p.getDni());
 		listaPersonas.add(p);
