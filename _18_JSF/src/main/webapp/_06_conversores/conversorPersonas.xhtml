@@ -7,6 +7,8 @@
 <h:head></h:head> 
 <body> 
 	<h:form>
+		<!-- Mediante select radio SOLO podemos mandar cadenas, no podemos mandar
+		objetos. Si queremos mandar objetos debemos de usar conversores -->
 		<h:selectOneRadio value="#{personaController.personaEscogida}" >
 			<f:selectItems value="#{personaController.listaPersonas}"
 				var="p" itemLabel="#{p.nombre}" itemValue="#{p}" />
@@ -16,6 +18,10 @@
 			no estamos dentro de una estructura repetitiva
 		-->
 		<h:commandButton action="#{personaController.enviar()}" value="Enviar" />
+		<hr/>
+		
+		<h:outputText value="#{personaController.personaEscogida}" converter="personaConverter" />
+		
 	</h:form>
 </body> 
 </html>

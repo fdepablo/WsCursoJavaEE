@@ -8,7 +8,8 @@ import javax.faces.convert.FacesConverter;
 @FacesConverter(value="personaConverter")
 public class PersonaConverter implements Converter{
 
-	//Cuando lo queremos leer del navegador
+	//Cuando lo queremos mandar de la vista JSF al MB
+	//Dentro de arg2 vendrá el string que quiero convertir a Object
 	@Override
 	public Object getAsObject(FacesContext arg0, UIComponent arg1, String arg2) {
 		
@@ -19,7 +20,8 @@ public class PersonaConverter implements Converter{
 		return persona;
 	}
 
-	//Cuando lo queremos mandar al navegador
+	//Cuando lo queremos mandar desde el MB a la vista JSF
+	//Dentro de arg2 vendrá el objeto que quiero convertir a String
 	@Override
 	public String getAsString(FacesContext arg0, UIComponent arg1, Object arg2) {
 		

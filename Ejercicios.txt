@@ -113,3 +113,8 @@ como numerica, convertira el string que le llegue desde la petión HTTP al forma
 Ejercicio 10
 ------------
 Hacer el ejercicio 7 con JSF
+
+Ejercicio 11
+------------
+Continuar con el ejercicio 10, pero esta vez queremos meter alguna regla de navegación y utilizando un MB de
+aplicación para saber el numero total de pizzas pedidas por todos los clientes.

@@ -19,8 +19,8 @@ public class Persona {
 		this.dni = dni;
 	}
 	
-	//Cuando usamos conversores debemos de sobreescribir el método 'hashcode'
-	//y 'equals' boton derecho -> source
+	//Cuando usamos conversores debemos de sobreescribir el mÃ©todo 'hashcode'
+	//y 'equals' boton derecho -> source -> override hashcode equals
 	@Override
 	public int hashCode() {
 		return Objects.hash(dni, nombre);
@@ -35,5 +35,7 @@ public class Persona {
 			return false;
 		Persona other = (Persona) obj;
 		return Objects.equals(dni, other.dni) && Objects.equals(nombre, other.nombre);
-	}		
+	}	
+	
+	
 }

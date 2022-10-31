@@ -1,15 +1,11 @@
 package es.conversores;
 
-import java.io.Serializable;
 import java.util.Date;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 
 @ManagedBean
-@SessionScoped
-public class FechaController implements Serializable{
-	private static final long serialVersionUID = 1L;
+public class FechaController{
 
 	private Date date = new Date();
 
