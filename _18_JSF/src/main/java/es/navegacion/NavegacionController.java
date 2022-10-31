@@ -17,9 +17,11 @@ public class NavegacionController {
 	
 	public String validar(){
 		if(palabra.equalsIgnoreCase("pepe")){
-			return "fallo";
+			System.out.println("fallo");
+			return "fallo";//error
 		}else{
-			return "exito";
+			System.out.println("exito");
+			return "exito";//paginaPrincipal
 		}
 	}
 }
