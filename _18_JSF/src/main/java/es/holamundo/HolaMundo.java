@@ -59,14 +59,14 @@ public class HolaMundo {
 	//Con esta anotación estamos diciendo al contexto de JSF
 	//que antes de que se cree este MB, se ejecute este método
 	@PostConstruct
-	public void antes(){
+	public void antesDeCrear(){
 		System.out.println("Construyendo el bean");
 	}
 	
 	//Con esta anotación estamos diciendo al contexto de JSF
 	//que antes de que se destruya este MB, se ejecute este método
 	@PreDestroy
-	public void despues(){
+	public void antesDeDestruir(){
 		System.out.println("destruyendo el bean");
 	}
 }

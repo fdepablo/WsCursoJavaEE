@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
+//Este objeto será compartido por todos los usuarios
 @ManagedBean
 @ApplicationScoped
 public class Aplicacion implements Serializable{

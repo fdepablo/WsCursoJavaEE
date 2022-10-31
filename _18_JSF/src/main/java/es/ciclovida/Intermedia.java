@@ -4,6 +4,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 
+//En este caso el ambito será de sesión por usuario
+
 @ManagedBean
 @RequestScoped
 public class Intermedia {
@@ -12,7 +14,7 @@ public class Intermedia {
 	private String palabra;
 	@ManagedProperty(value="#{aplicacion}")
 	private Aplicacion aplicacion;
-	@ManagedProperty(value="#{usuario}")
+	@ManagedProperty(value="#{userBean}")
 	private User user;
 	
 	public Aplicacion getAplicacion() {
@@ -40,11 +42,12 @@ public class Intermedia {
 	}
 	
 	public String enrutar(String direccion){
+		//Necesito acceder tanto al objeto Aplicacion como al objeto
+		//User para acceder a sus atributos.
 		System.out.println("Recibiendo peticion del usuario: " + user.getName());
 		long actual = aplicacion.getContadorPaginas();
 		aplicacion.setContadorPaginas(++actual);
-		return direccion;
-		
+		return direccion;		
 	}
 	
 }

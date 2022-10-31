@@ -5,7 +5,7 @@ import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-@ManagedBean
+@ManagedBean(name = "userBean")
 @SessionScoped
 public class User implements Serializable{
 

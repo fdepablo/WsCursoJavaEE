@@ -6,10 +6,14 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <body>
-	Nombre: <h:outputText value="#{user.name}"></h:outputText><br/>
-	Apellido: <h:outputText value="#{user.pass}"></h:outputText><br/>
-	
-	Palabra: <h:outputText value="#{intermedia.palabra}"></h:outputText><br/>	
-	ContadorPaginas: <h:outputText value="#{aplicacion.contadorPaginas}"></h:outputText>
+	<h:form>
+		Nombre: <h:outputText value="#{userBean.name}"></h:outputText><br/>
+		Apellido: <h:outputText value="#{userBean.pass}"></h:outputText><br/>
+		
+		Palabra: <h:outputText value="#{intermedia.palabra}"></h:outputText><br/>	
+		ContadorPaginas: <h:outputText value="#{aplicacion.contadorPaginas}"></h:outputText>
+		<hr/>
+		<h:commandButton value="Ir a primera" action="#{intermedia.enrutar('primera')}"></h:commandButton>
+	</h:form>
 </body>	
 </html>
