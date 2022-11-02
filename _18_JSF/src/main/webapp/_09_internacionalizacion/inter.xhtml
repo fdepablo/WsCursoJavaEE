@@ -7,8 +7,10 @@
 <h:head></h:head>
 <body>
 	<h1>
-		<h:outputText value="#{mensaje['welcome']}" />
-		<!-- Si es solo una palabra podemos acceder directamente -->
+		<!-- En una página con i18n debemos de trabajar con el nombre de la variable
+		que definimos en nuestro faces-config.xml -->
+		<h:outputText value="#{mensaje['welcome']}" /><br/>
+		<!-- Si la clave es solo una palabra podemos acceder directamente -->
 		<h:outputText value="#{mensaje.welcome}" />
 	</h1>
 
@@ -31,6 +33,7 @@
 			<h:outputFormat value="#{mensaje['user.notfound']}"
 				rendered="#{i18nMB.errorNombre}">
 				<f:param value="#{i18nMB.nombre}" />
+				<f:param value="#{i18nMB.errorNombre}" />
 			</h:outputFormat>
 		</h:panelGrid>
 	</h:form>

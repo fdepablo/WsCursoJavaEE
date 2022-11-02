@@ -26,6 +26,7 @@ public class I18nMB {
 		System.out.println("Cambiando a idioma: " + idioma);
 		Locale nuevoLocale = obtenerLocale();
 		System.out.println("Estableciando el locale... " + nuevoLocale);
+		//Establecemos el nuevo Locale al contexto de JSF
 		FacesContext.getCurrentInstance().getViewRoot().setLocale(nuevoLocale);		
 		System.out.println("Nuevo Locale del contexto: " + FacesContext.getCurrentInstance().getViewRoot().getLocale());
 		return null;
@@ -34,10 +35,11 @@ public class I18nMB {
 	public Locale obtenerLocale(){
 		Locale locale;
 		if(idioma.equals("English")){
+			//Para crear un Locale debemos de pasarle el idioma y el pais
 			locale = new Locale("en","EN");
 		}else if (idioma.equals("Spanish")){
 			locale = new Locale("es","ES");
-		}else{//Por defecto establecemos el idioma espa�ol
+		}else{//Por defecto establecemos el idioma español
 			locale = new Locale("es","ES");
 		}
 		
@@ -45,7 +47,10 @@ public class I18nMB {
 	}
 	
 	public String validarUsuario(){
+		//Accedemos de manera programática a nuestro ResurouceBundle
+		//Pero debemos de pasarle en idioma (locale) con el que estamos trabajando
 		ResourceBundle rs = ResourceBundle.getBundle("es/resources/lenguaje",obtenerLocale());
+		//pintamos por la consola el valor del recurso user.validate
 		System.out.println(rs.getString("user.validate"));
 		if(nombre.equalsIgnoreCase("pepe")){
 			errorNombre = true;

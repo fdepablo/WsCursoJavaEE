@@ -26,7 +26,7 @@
 	<!-- Definimos reglas para el i18n -->
 	<application>
 		<locale-config>
-			<default-locale>es</default-locale>
+			<default-locale>en_EN</default-locale>
 		</locale-config>
 		<resource-bundle>
 			<base-name>es.resources.lenguaje</base-name>

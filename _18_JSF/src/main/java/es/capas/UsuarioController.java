@@ -8,6 +8,7 @@ import javax.faces.context.FacesContext;
 @ManagedBean
 public class UsuarioController{
 	
+	//Inyección de dependencias mediante una propiedad gestionada
 	@ManagedProperty(value="#{usuarioService}")
 	private UsuarioService usuarioService;
 	
@@ -15,6 +16,9 @@ public class UsuarioController{
 	private String password;
 
 	public String alta() {
+		//En este caso creo un usuario para pasarselo al UsuarioController y 
+		//validarlo. OJO! No cofundir el objeto Usuario de scope Session que es
+		//gestionado por JSF
 		Usuario usuario = new Usuario();
 		usuario.setNombre(nombre);
 		usuario.setPassword(password);
@@ -23,7 +27,10 @@ public class UsuarioController{
 		if(alta) {
 			return "principal";
 		}else {
-			FacesMessage message = new FacesMessage("El usuario tiene que estar relleno");
+			FacesMessage message = new FacesMessage("El nombre y el password no pueden estar "
+					+ "vacios");
+			//Si devolvemos null en el addMessage, entonces no asociamos el error a ningun
+			//componente
 			FacesContext.getCurrentInstance().addMessage(null, message);
 			return null;
 		}
