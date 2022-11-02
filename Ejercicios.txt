@@ -122,7 +122,7 @@ aplicación para saber el numero total de pizzas pedidas por todos los clientes.
 Ejercicio 12
 ------------
 A partir del ejercicio 10 o 11, meter algunas reglas de validación (por ejemplo, que el cliente este relleno o que
-tengamos que seleccionar algun ingrediente)
+tengamos que seleccionar algun ingrediente). Podéis hacer este ejercicio con cualquier otro ejercicio de JSF.
 
 Meter algún literal con i18n. No hace falta que hagaís el cambio de lenguaje, es suficiente con establecer
 el lenguaje dentro del faces-config.xml. Si queréis hacer el cambio podéis copiar mi codigo.
