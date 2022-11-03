@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:body>
+	<h:form>
+		<h:outputText style="color:red" value="Bienvenidos a nuestra primera página web"></h:outputText>
+		<br/>
+		<h:outputText style="color:blue" value="#{holaMundo.mensaje}"></h:outputText>
+		<br/>
+		<h:outputText style="color:blue" value="#{holaMundo.getMensaje()}"></h:outputText>
+		<br/>
+		<h:commandButton value="Pulsa aqui" action="respuestaHolaMundo"></h:commandButton>
+		<br/>
+		<hr/>
+		<h:inputText style="color:red" value="#{holaMundo.dato1}"></h:inputText>
+		<h:commandButton value="Pulsa aqui (Dato1)" action="#{holaMundo.ejecutarDato1()}"></h:commandButton>
+	</h:form>
+</h:body>
+
+</html>
