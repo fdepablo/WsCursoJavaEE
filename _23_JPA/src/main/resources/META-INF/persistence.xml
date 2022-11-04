@@ -4,21 +4,23 @@
 		<!-- Aqui pondemos todas las clases que queremos que JPA vaya a leer las anotaciones
 		para poder mapearlas a la BBDD -->
 		<class>modelo.entidad.Persona</class>
+		<class>modelo.entidad.Animal</class>
 		<properties>
 			<!-- Tenemos una seríe de parametros minimos que decirle a JPA para que se pueda
 			contectar a la BBDD -->
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa_persona"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa_introduccion"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
+			
 			<!-- 
 			Podemos poner los sigueintes parametros a la action de la generacion de la base
 			de datos:
-			create -> si queremos crear la bbdd cada vez que arranquemos la aplicacion.
+			create -> si queremos crear las tablas cuando arranquemos la aplicacion.
 			drop-and-create -> cada vez que arranquemos la app se borraran y crearan las 
 			tablas desde cero.
 			update -> para solamente refrescar las tablas en caso de cambios de anotaciones
 			 -->
-			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+			<property name="javax.persistence.schema-generation.database.action" value="update"/>
 						 
 			<!-- Mostrar trazas de sql y establecer dialecto con hibernate -->
 			<property name = "hibernate.show_sql" value = "true" />

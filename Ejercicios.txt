@@ -126,3 +126,25 @@ tengamos que seleccionar algun ingrediente). Podéis hacer este ejercicio con cu
 
 Meter algún literal con i18n. No hace falta que hagaís el cambio de lenguaje, es suficiente con establecer
 el lenguaje dentro del faces-config.xml. Si queréis hacer el cambio podéis copiar mi codigo.
+
+Ejercicio 13
+------------
+Vamos a crear un CRUD (Create, Read, Update y Delete) o en español CLMB (Crear, Leer, Modificar y borrar) con
+la entidad libro Son las 4 operaciones basicas que podemos hacer con una entidad.
+
+El libro va a tener los siguientes atributos:
+
+	id -> clave primaria
+	isbn -> clave unica
+	titulo -> no podra tener más de 100 caracteres
+	autor -> no podra tener más de 150 caracteres
+	precio -> tendra 5 de longitud maxima
+	fechaDePublicación -> se guardará solo la fecha
+	precioConDescuento -> igual que el precio pero con un decuento aplicado. Esta campo no lo 
+						queremos persistir.
+						
+Hacer el CRUD de este objeto probando con varias casuisticas. Probar tambien que cuando no se cumple
+alguna condición da una excepción al intentar hacerla.
+
+
+

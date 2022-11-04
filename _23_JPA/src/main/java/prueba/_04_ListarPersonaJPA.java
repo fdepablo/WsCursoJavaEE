@@ -16,6 +16,7 @@ public class _04_ListarPersonaJPA {
 		//Tenemos que apoyarnos en un lenguaje auxiliar que es JPQL para hacer esta consulta
 		//Lo de dentro no es un query al uso, aunque pueda parecerlo, es una sentencia/query JPQL
 		//en la cual Persona hacer referencia a la clase y la p seria el alias
+		//select * from personas [p]
 		List<Persona> listaPersonas = em.createQuery("from Persona p").getResultList();//select * from personas
 		for(Persona p : listaPersonas) {
 			System.out.println(p);

@@ -7,12 +7,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 //Con esta anotacion podemos decirle a JPA que esta clase sera
-//una tabla de base de datos, por defecto la tabla se llamará
+//una tabla de base de datos, por defecto la tabla se llamarï¿½
 //como la clase en lowercamelcase (persona). 
-//La clase debe de seguir la convención JavaBean
+//La clase debe de seguir la convenciï¿½n JavaBean
 @Entity
 //Si queremos cambiar el nombre de la tabla, podemos hacerlo
-//con la siguiente anotacion (no sería obligatorio)
+//con la siguiente anotacion (no serï¿½a obligatorio)
 @Table(name = "personas")
 public class Persona {
 	//la entidad debe de tener un id, en este caso sera 

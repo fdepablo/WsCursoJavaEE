@@ -14,14 +14,14 @@ La más popular es <b>Hibernate</b>, que también se incluye en el servidor de a
 
 ## Introducción al proyecto
 
-Este proyecto está hecho con JPA, EclipseLink y Maven. Aunque esta también preparado para funcionar con Hibernate solamente cambiando las dependencias en el pom.xml.
+Este proyecto está hecho con JPA, Hibernate (EclipseLink) y Maven. Aunque esta también preparado para funcionar con Hibernate solamente cambiando las dependencias en el pom.xml.
 
 Si te da error este proyecto al importarlo hacer botón derecho sobre el proyecto -> Maven -> Update Maven Proyect para bajarte las librerías que necesita este proyecto de internet
 
 ## Configuracion de proyecto con maven
 
 Para evitar problemas de dependencias, podemos hacer un proyecto Maven y que sea este el que 
-nos lleve las dependencias del proyecto. Para ello ver el proyecto 30_Maven
+nos lleve las dependencias del proyecto. Para ello ver el proyecto 19_Maven
 
 Una vez creado el proyecto Maven, debemos de configurar y crear las clases de entidad
 y anotarlas adecuadamente (modelo.entidad). En este caso, la clase Persona
@@ -78,7 +78,7 @@ En un determinado momento, el entity manager debe volcar a la base de datos todo
 
 ### Obtencion del EntityManager
 
-Cuando estamos usando JPA gestionado por una aplicación Java SE, el entity manager se obtiene a partir de un EntityManagerFactory. Para obtener la factoría se debe llamar al método estático createEntityMagerFactory() de la clase Persistence. En este m�todo se debe proporcionar el nombre de la unidad de persistencia que vamos a asociar a la factoría.
+Cuando estamos usando JPA gestionado por una aplicación Java SE, el entity manager se obtiene a partir de un EntityManagerFactory. Para obtener la factoría se debe llamar al método estático createEntityMagerFactory() de la clase Persistence. En este método se debe proporcionar el nombre de la unidad de persistencia que vamos a asociar a la factoría.
 
 	EntityManagerFactory emf = Persistence.createEntityManagerFactory("NOMBRE_UNIDAD_PERSISTENCIA");
 	
@@ -86,7 +86,7 @@ Una vez que tenemos una factoría, podemos obtener fácilmente un EntityManager:
 
 	EntityManager em = emf.createEntityManager();
 	
-Es muy importante considerar que los objetos EntityManager no son thread-safe. Cuando los utilicemos en servlets, por ejemplo, deberemos crearlos en cada petición HTTP. De esta forma se evita que distintas sesiones accedan al mismo contexto de persistencia. Si queremos que una sesiín HTTP utilice un único entity manager, podríamos guardarlo en el objeto HtttpSession y acceder a �l al comienzo de cada petición. El objeto EntityManagerFactory a partir del que obtenemos los entity managers s� que es thread-safe.
+Es muy importante considerar que los objetos EntityManager no son thread-safe. Cuando los utilicemos en servlets, por ejemplo, deberemos crearlos en cada petición HTTP. De esta forma se evita que distintas sesiones accedan al mismo contexto de persistencia. Si queremos que una sesiín HTTP utilice un único entity manager, podríamos guardarlo en el objeto HtttpSession y acceder a �l al comienzo de cada petición. El objeto EntityManagerFactory a partir del que obtenemos los entity managers debe ser thread-safe.
 
 ### Contexto de persistencia
 
