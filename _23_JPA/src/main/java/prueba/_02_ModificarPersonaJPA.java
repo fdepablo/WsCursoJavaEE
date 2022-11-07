@@ -13,7 +13,7 @@ public class _02_ModificarPersonaJPA {
 		EntityManager em = factoria.createEntityManager();
 		
 		Persona persona = new Persona();
-		persona.setId(1);//por defecto la modificacion es sobre clave primaria
+		persona.setId(3);//por defecto la modificacion es sobre clave primaria
 		persona.setNombre("Navajita platea");
 		persona.setEdad(90);
 		persona.setPeso(70);

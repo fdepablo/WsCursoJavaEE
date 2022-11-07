@@ -146,5 +146,18 @@ El libro va a tener los siguientes atributos:
 Hacer el CRUD de este objeto probando con varias casuisticas. Probar tambien que cuando no se cumple
 alguna condición da una excepción al intentar hacerla.
 
+Ejercici 14
+-----------
+Hacer un programa en JPA con 3 entidades, dichas entidades deben de cubrir los tipos de relaciones one to one y
+one to many. Cada entidad con 2 o tres atributos
+
+Ej: EquipoFutbol one to many con Jugador
+	Jugador one to one Direccion
+
+	EquipoFutbol -> id, nombre, nombreEstadio
+	Jugador-> id, nombre, dorsal
+	Historial-> id, numeroGoles, numeroTarjetasAmarillas.
+	
+Dar de alta algunos registros.
 
 

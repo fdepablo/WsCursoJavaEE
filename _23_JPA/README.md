@@ -135,13 +135,13 @@ Normalmente este método se utiliza para modificar información en base de datos
 Podemos identificar las siguientes casuísticas:
 
 1. El objeto pasado tiene datos y valor en el id, es decir, un caso normal de modificación de una entidad.
-    - Si el objeto <b>SI</b> lo tiene ya en la caché, mira si los datos cambian y si es as� modifica el objeto gestionado (el objeto de cache) y lo marca para un update cuando hagamos el commit o el flush.
+    - Si el objeto <b>SI</b> lo tiene ya en la caché, mira si los datos cambian y si es así modifica el objeto gestionado (el objeto de cache) y lo marca para un update cuando hagamos el commit o el flush.
     - Si el objeto <b>NO</b> lo tiene en la caché entonces hará un select para traer el objeto a la cache pero podrá suceder lo siguiente:
         - Que no exista en BBDD: INSERT del objeto en bbdd. Es decir, su comportamiento sería igual que el de un <b>persist()</b>
         - Que exista pero que los datos no cambien: no hace nada
         - Que exista y con datos diferentes: se lo trae, lo modifica con los datos del objeto que pasamos y lo marca para update al hacer commit
 	
-2. El objeto pasado tiene datos, pero la clave primaria a null -> En este caso insertara el objeto y le asignar� un ID, siempre y cuando la clave primaria sea gestionada por la BBDD. Es decir, su comportamiento sería igual que el de un <b>persist()</b>
+2. El objeto pasado tiene datos, pero la clave primaria a null -> En este caso insertara el objeto y le asignará un ID, siempre y cuando la clave primaria sea gestionada por la BBDD. Es decir, su comportamiento sería igual que el de un <b>persist()</b>
 
 Hay que tener cuidado con su utilización, porque el objeto que se pasa como parámetro no pasa a ser gestionado. Hay que usar el objeto que devuelve el método. Veamos el siguiente ejemplo para entenderlo mejor, dado el siguiente registro en la tabla:
 
@@ -154,7 +154,7 @@ Ejecutamos el siguiente Código
 	Cliente c = new Cliente(1,"A","B",C");
 	em.merge(c);
 	c.setNombre("F"); 
-	//El cambio se perder� cuando hagamos el commit, ya que el objeto donde estamos cambiando el valor no es el objeto gestionado
+	//El cambio se perderá cuando hagamos el commit, ya que el objeto donde estamos cambiando el valor no es el objeto gestionado
 	em.commit();
 	
 	Cliente c = new Cliente(1,"A","B",C");
@@ -166,7 +166,7 @@ Ver el ejemplo _02_ModificarPersonaJPA
 
 ### Find para buscar entidades
 
-Mediante el método find() el entity manager buscar� esa entidad en la base de datos y devolverá la instancia buscada. La entidad devuelta será una entidad gestionada que existirá en el contexto de persistencia actual asociado al entity manager.
+Mediante el método find() el entity manager buscará esa entidad en la base de datos por clave primaria, y devolverá la instancia buscada. La entidad devuelta será una entidad gestionada, es decir, se agregará al el contexto de persistencia actual asociado al entity manager.
 
 En el caso en que no existiera ninguna entidad con ese identificador, se devolverá simplemente null.
 
@@ -176,11 +176,11 @@ Ver ejemplo _03_ObtenerPersonaJPA
 
 Un borrado de una entidad realiza una sentencia DELETE en la base de datos. Puede que no sea necesario hacer borrados muy a menudo ya que muchas veces los registros en BBDD se marcan como no activos para no perderlos y recuperarlos en un futuro.
 
-Es muy importante entender que, para eliminar una entidad, la entidad debe estar gestionada, esto es, debe existir el objeto en el contexto de persistencia. Es por ello que normalmente antes de hacer un <b>remove()</b> del objeto, hagamos un <b>find()</b> del objeto que queramos borrar para que sea gestionado por el entity manager, o dicho de otra manera, para meterlo en el contexto de persistencia.
+Es muy importante entender que, para eliminar una entidad, **la entidad debe estar gestionada**, esto es, debe existir el objeto en el contexto de persistencia. Es por ello que normalmente antes de hacer un <b>remove()</b> del objeto, hagamos un <b>find()</b> del objeto que queramos borrar para que sea gestionado por el entity manager, o dicho de otra manera, para meterlo en el contexto de persistencia.
 
 Si intentamos hacer un <b>remove()</b> sobre un objeto no gestionado, dara una excepción al ejecutar el <b>commit()</b>.
 
-### Actualización de entidades
+### Actualización parcial de entidades
 
 Para actualizar una entidad, primero debemos obtenerla para convertirla en gestionada. Después podremos colocar los nuevos valores en sus atributos. 
 
