@@ -160,4 +160,18 @@ Ej: EquipoFutbol one to many con Jugador
 	
 Dar de alta algunos registros.
 
+Ejercicio 15
+------------
+
+Basandose en mi ejemplo o en el ejercicio 14, hacer algunas consultas JPQL
+
+1. Buscar los equipos de futbol por nombre
+2. Buscar los jugadores  por dorsal
+3. Buscar el total de tarjetas amarillas en el historial
+
+Ejericio 16
+-----------
+
+Hacer un XML valido basandose en el ejercicio 1
+
 
