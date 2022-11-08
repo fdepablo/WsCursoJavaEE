@@ -110,18 +110,18 @@ public class Cliente {
 	// Este cascade hace que cuando demos de alta o baja un cliente, lo hagamos
 	// tambien de sus pedidos asociados. OJO! con esto porque podemos perder
 	// información de pedidos.
-	@OneToMany(mappedBy="cliente", cascade=CascadeType.ALL) 
+	@OneToMany(mappedBy="cliente", cascade=CascadeType.ALL,fetch = FetchType.LAZY) 
 	private List<Pedido> pedidos;
 	
 	// Relacion de "muchos a muchos"
 	//------------------------------
-	// En este tipo de relaciones se nos creara una tabla intermedia automacticamente
+	// En este tipo de relaciones se nos creara una tabla intermedia automáticamente
 	// con las FK a las PK de las otras tablas.
 	// Es una relacion que muchas veces es mejor crear una entidad nueva intermedia
-	// y hacer relaciones 1 a N y N a 1 con esa entidad nueva creada, porque as�
+	// y hacer relaciones 1 a N y N a 1 con esa entidad nueva creada, porque así
 	// podemos crear esa tabla intermedia a nuestro gusto, con los atributos
 	// que queramos. 
-	// Si hacemos una relaci�n ManyToMany se nos creara esta tabla intermedia, 
+	// Si hacemos una relación ManyToMany se nos creara esta tabla intermedia, 
 	// pero no podremos modificar sus campos.
 
 	// OJO! CascadeType.ALL es PELIGROSISIMO, ya que 

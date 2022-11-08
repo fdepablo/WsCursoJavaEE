@@ -72,7 +72,7 @@ public class _03_PruebasOneToMany {
 				
 		//El siguiente persist tambien funcionaria, de hecho al insertar cliente
 		//y detectar que tiene 4 pedidos mas, tambien se insertarian los pedidos en la
-		//BBDD. Todo esto es as� por los cascades en ambos sentidos
+		//BBDD. Todo esto es así por los cascades en ambos sentidos
 		//em.persist(p2); 
 		
 		em.getTransaction().commit(); 
@@ -120,7 +120,7 @@ public class _03_PruebasOneToMany {
 		//Nota para Hibernate a la hora de acceder a los pedidos si esta configurado
 		//como lazy:
 		//Hay que acceder a los pedidos antes de cerrar el entity manager
-		//si no, daria error al intentar acceder a los pedidos m�s adelante.
+		//si no, daria error al intentar acceder a los pedidos más adelante.
 		//Si se utiliza eclipselink o toplink no haria falta hacerlo
 		//System.out.println("Numero de pedidos " + c2.getPedidos().size());
 		em.close();
