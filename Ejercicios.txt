@@ -174,4 +174,9 @@ Ejericio 16
 
 Hacer un XML valido basandose en el ejercicio 1
 
+Ejercicio 17
+------------
+
+Hacer un XSD valido para el ejercio 16
+
 

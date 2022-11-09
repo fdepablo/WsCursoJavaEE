@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persona xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation= "05_XSD_ExpresionesRegulares.xsd">
+    <fijo>abc</fijo>
+    <posicion>1</posicion>
+    <letra>T</letra>
+    <Dosletra>TD</Dosletra>
+    <Tresletra>TTD</Tresletra>
+    <rango_numerico>5</rango_numerico>
+    <rango_numerico_2>33</rango_numerico_2>
+    <rango_de_letras_minusculas>k</rango_de_letras_minusculas>
+    <rango_de_letras>R</rango_de_letras>
+    <ejemplo_cardinalidad_uno_muchos>aZaZtTRdfasfdsrdfsdfsd</ejemplo_cardinalidad_uno_muchos>
+    <ejemplo_cardinalidad_cero_muchos></ejemplo_cardinalidad_cero_muchos>
+    <ejemplo_llaves>abcdefgh</ejemplo_llaves>
+    <ejemplo_llaves_2>abcde</ejemplo_llaves_2>
+    <DNI>12345679Z</DNI>
+    <conjunto_letras>z</conjunto_letras>
+    <conjunto_letras_con_repeticion>abcAZ</conjunto_letras_con_repeticion>
+    <matricula>1232-FFF</matricula>
+    <nombre_apellido>Steve Rogers</nombre_apellido>
+    <email>ironman@avengers.com</email>
+</persona>

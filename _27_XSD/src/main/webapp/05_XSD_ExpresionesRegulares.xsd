@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<!-- Para este ejemplo se ha eliminado el nombre del esquema (xs), por lo que ya no hace falta
+    poner "xs" delante de cada etiqueta -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+    <element name="persona">
+        <complexType>
+            <sequence>
+                <element name="fijo">
+                    <simpleType>
+                        <restriction base="string">
+                             <!-- Tiene que ser "abc" exclusivamente -->
+                            <pattern value="abc"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="posicion">
+                    <simpleType>
+                        <restriction base="string">
+                             <!-- Cualquier digito -->
+                            <pattern value="\d"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="letra">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Cualquier NO digito -->
+                            <pattern value="\D"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="Dosletra">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Cualquier NO digito -->
+                            <pattern value="\D\D"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="Tresletra">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Cualquier NO digito -->
+                            <pattern value="\D{3}"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="rango_numerico">
+                    <simpleType>
+                        <restriction base="integer">
+                            <!-- Valores entre el 0 y el 5 -->
+                            <pattern value="[012345]"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="rango_numerico_2">
+                    <simpleType>
+                        <restriction base="integer">
+                            <!-- Valores entre el 0 y el 5 -->
+                            <pattern value="[0-5]{2}"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="rango_de_letras_minusculas">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Un rango de letras, con un "-" decimos el principio del rango y 
+                            el final del rango -->
+                            <pattern value="[a-z]"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="rango_de_letras">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Un rango de letras minusculas o mayusculas -->
+                            <pattern value="[a-zA-Z]"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="ejemplo_cardinalidad_uno_muchos">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Un rango de letras pero 8 letras exactamente -->
+                            <pattern value="[a-zA-Z]+"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="ejemplo_cardinalidad_cero_muchos">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Un rango de letras pero 8 letras exactamente -->
+                            <pattern value="[a-zA-Z]*"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="ejemplo_llaves">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Un rango de letras pero 8 letras exactamente -->
+                            <pattern value="[a-zA-Z]{8}"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="ejemplo_llaves_2">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Un rengo de letras de 2 a 8 coincidencias -->
+                            <pattern value="[a-zA-Z]{2,8}"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="DNI">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Validar un DNI -->
+                            <pattern value="[0-9]{8}[A-Z]"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="conjunto_letras">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Solo admitimos el siguiente conjunto de letras -->
+                            <pattern value="[abcABCzZ]"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="conjunto_letras_con_repeticion">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Solo admitimos el siguiente conjunto de letras de 1 a 5 veces -->
+                            <pattern value="[abcABCzZ]{1,5}"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="matricula">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Una matricula de un coche-->
+                            <pattern value="[0-9]{4}-[BCDFGHJKLMNPQRSTVWXYZ]{3}"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="nombre_apellido">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- nombre seguido de un espacio en blanco y luego un apellido-->
+                            <pattern value="[A-Za-z]+\s[A-Za-z]+"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="email">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Muchas veces es mejor buscar validaciones por internet porque
+                            es facil equivocarse con las validaciones complejas -->
+                            <pattern value="[^@]+@[^\.]+\..+"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

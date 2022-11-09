@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="pelicula">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo" type="xs:string"/>
+                <xs:element name="fecha" type="xs:string" />
+                <xs:element name="actores">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="actor" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string"></xs:element>
+                                        <xs:element name="edad" type="xs:integer"></xs:element>
+                                        <!-- Super estrella es un elemento vacio y opcional -->
+                                        <xs:element name="super_estrella" minOccurs="0">
+                                            <xs:complexType />
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="director" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="categoria" type="xs:string" use="required"/>
+            <!-- No hace falta decir que es opcional, los atributos en XSD son opcionales
+            por defecto -->
+            <xs:attribute name="calificacion" type="xs:integer"/>
+            <xs:attribute name="edad" type="xs:integer" default="18"/>
+            <xs:attribute name="empresa" type="xs:string" fixed="Walt Disney"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
