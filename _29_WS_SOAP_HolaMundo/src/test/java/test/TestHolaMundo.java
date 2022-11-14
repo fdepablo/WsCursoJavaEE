@@ -20,6 +20,8 @@ public class TestHolaMundo {
 			//Los siguientes datos los sacamos del WSDL
 			//targetNamespace="http://webservice/"
 			//<wsdl:service name="HolaMundoWSService">
+			//Tambien podemos sacarlo del "serviceName" cuando arrancamos el servicio SOAP en el 
+			//log del JBOSS
 			QName qname = new QName("http://webservice/", "HolaMundoWSService");
 			Service service = Service.create(url, qname);
 			//Importante, aquí tenemos que trabajar con la interfaz

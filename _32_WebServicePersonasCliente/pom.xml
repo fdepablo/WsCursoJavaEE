@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>es.curso</groupId>
+  <artifactId>_32_WebServicePersonasCliente</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+	</properties>
+
+	<!-- 
+	Para generar las clases cliente para conectarnos a un servidor web SOAP debemos
+	de cargar el siguiente plugin en el pom.xml y las siguientes dependencias 
+	
+	Los parametros que debemos de cambiar son los siguientes:
+	
+		wsdlUrl-> Aquí debemos de poner la url del WSDL de nuestro servicio
+		packageName-> paquete donde queremos que se generen las clases
+		sourceDestDir-> Directorio de nuestro classpath donde queremos generar el paquete
+	-->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.sun.xml.ws</groupId>
+				<artifactId>jaxws-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<wsdlUrls>
+						<wsdlUrl>http://localhost:8080/_01_WebServicePersonas-0.0.1-SNAPSHOT/PersonaWSImplements?wsdl</wsdlUrl>
+					</wsdlUrls>
+					<keep>true</keep>
+					<packageName>es.soap.ws.client.generated</packageName>
+					<sourceDestDir>src/main/java</sourceDestDir>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>jakarta.xml.ws</groupId>
+			<artifactId>jakarta.xml.ws-api</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.ws</groupId>
+			<artifactId>jaxws-rt</artifactId>
+			<version>3.0.0</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.ws</groupId>
+			<artifactId>jaxws-ri</artifactId>
+			<version>3.0.0</version>
+			<type>pom</type>
+		</dependency>
+	</dependencies>
+	<!--
+	Luego debemos de ejecutar el siguiente comando maven y que nos genere todas las clases cliente
+	
+	mvn clean jaxws:wsimport
+	
+	Guia para ejecutar el comando desde maven:
+	https://stackoverflow.com/questions/6079253/running-maven-exec-plugin-inside-eclipse
+	
+	Resumen:
+	Básicamente -> Run as -> Run configuration -> Maven Build -> New Configuration
+	
+	Dentro de la página que se abre
+		
+		1- Poner el nombre
+		2- En "base directory" escoger dentro del workspace el proyecto
+		3- En "Goal" poner el comando "clean jaxws:wsimport"
+		
+	No olvidarse de tener el servidor arrancado! Ni de refrescar el proyecto!
+	
+	-->
+	
+	<!--
+		Nota:
+		Con Java 8 están incluidas en las herramientas de la JDK un generador de clases de un WS
+		, así pues podriamos ejecutar el siguiente comando sin necesidad de hacer lo anterior
+		
+		JAVA_HOME/bin/wsimport -s src/main/java/ -keep -p es.soap.ws.client.generated "http://localhost:8080/PruebaWebService23-0.0.1-SNAPSHOT/PersonaWSImplements?wsdl"
+	-->
+</project>

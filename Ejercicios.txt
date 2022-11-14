@@ -179,4 +179,16 @@ Ejercicio 17
 
 Hacer un XSD valido para el ejercio 16
 
+Ejericio 18
+-----------
+
+Hacer un servicio web SOAP que implemente una calculadora. La calculadora implementará los métodos:
+
+1- Sumar: Recibe 2 numeros enteros y devuelve la suma en un numero entero
+2- Restar: Recibe 2 numeros enteros y devuelve la resta en un numero entero
+3- Multiplicación: Recibe 2 numeros enteros y devuelve la multiplicación en un numero long
+4- División: Recibe 2 numeros enteros y devuelve la division en un numero entero
+
+Generar el cliente para probar el servicio REST
+
 
