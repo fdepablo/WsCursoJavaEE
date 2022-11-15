@@ -191,4 +191,15 @@ Hacer un servicio web SOAP que implemente una calculadora. La calculadora implem
 
 Generar el cliente para probar el servicio REST
 
+Ejericio 19
+-----------
+Hacer un servicio REST que devuelva una persona en formato GSON.
+
+1. Crear una aplicación REST y meter las librerias GSON
+2. Mapear una URL para que devuelva una persona por GET
+
+Probar la aplicación con POSTMAN (instalarlo)
+
+
+
 
