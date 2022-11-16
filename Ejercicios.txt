@@ -200,6 +200,16 @@ Hacer un servicio REST que devuelva una persona en formato GSON.
 
 Probar la aplicación con POSTMAN (instalarlo)
 
+Ejercicio 20
+------------
+
+Hacer un servicioi REST que implemente un GET y un POST de la entidad coche vista en clase.
+
+El GET será por id y el POST deberá de dar de alta un coche. No hace falta hacer el DAOCoche, hacerlo
+todo si queréis dentro del controlador.
+
+Si queréis hacer todos los metodos por probar, hacerlo (GET, POST, PUT, DELETE)
+
 
 
 
