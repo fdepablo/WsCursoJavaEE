@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+	<h1>Datos del pedido</h1>
+	<h:outputText value="Nombre del cliente #{controladorPedido.pedido.nombre}" />
+	<h:dataTable value="#{controladorPedido.pedido.listaPizzas}" var="p">
+		<h:column>
+			<f:facet name="header">Tamaño</f:facet>
+			<h:outputText value="#{p.size}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">Ingredientes</f:facet>
+			<h:outputText value="#{p.ingredientes}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">Precio</f:facet>
+			<h:outputText value="#{p.precio}" />
+		</h:column>
+	</h:dataTable>
+	<h:outputText value="Precio total del pedido: #{controladorPedido.pedido.precioTotal}" />
+</body> 
+</html>

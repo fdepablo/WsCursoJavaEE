@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+	<h1><h:outputText value="#{mensaje.welcome}" /><br/></h1>
+	<h:form>
+		<h:panelGrid columns="3">
+			<h:outputText value="Nombre: " />
+			<h:inputText id="inputNombre" value="#{controladorPedido.nombre}" requiredMessage="El nombre es obligatorio" required="true" />
+			<h:message for="inputNombre" style="color:red"/>
+		</h:panelGrid>
+		
+		<h3>Seleccione el tamaño:</h3>
+		<h:panelGrid columns="2">
+			<h:selectOneRadio id="tamanios" value="#{controladorPedido.tamanio}" layout="pageDirection" requiredMessage="Debe seleccionar algun tamaño" required="true">
+				<f:selectItem itemValue="pequenia" itemLabel="Pequeña"/>
+				<f:selectItem itemValue="mediana" itemLabel="Mediana"/>
+				<f:selectItem itemValue="grande" itemLabel="Grande"/>
+			</h:selectOneRadio>
+			<h:message for="tamanios" style="color:red"/>	
+		</h:panelGrid>
+		
+		<h3>Seleccione los ingredientes:</h3>
+		<h:panelGrid columns="2">
+			<h:selectManyCheckbox id="ingredientes" value="#{controladorPedido.ingredientes}" requiredMessage="Debe seleccionar algun ingrediente" required="true"> 
+				<f:selectItem itemValue="Anchoas" itemLabel="Anchoas" /> 
+				<f:selectItem itemValue="Aceitunas" itemLabel="Aceitunas" /> 
+				<f:selectItem itemValue="Queso" itemLabel="Queso" /> 
+				<f:selectItem itemValue="Brocoli" itemLabel="Brocoli" /> 
+			</h:selectManyCheckbox>	
+			<h:message for="ingredientes" style="color:red"/>	
+		</h:panelGrid>
+			
+		<h:commandButton value="Agregar Pizza" action="#{controladorPedido.addPizza()}" />
+		<br/><br/>
+		<h:commandButton value="Procesar Pedido" action="#{controladorPedido.procesarPedido()}" />
+		
+		<hr/>
+		
+		<h:dataTable value="#{controladorPedido.pedido.listaPizzas}" var="p">
+			<h:column>
+				<f:facet name="header">Tamaño</f:facet>
+				<h:outputText value="#{p.size}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Ingredientes</f:facet>
+				<h:outputText value="#{p.ingredientes}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Precio</f:facet>
+				<h:outputText value="#{p.precio}" />
+			</h:column>
+		</h:dataTable>
+	</h:form>
+</body> 
+</html>
