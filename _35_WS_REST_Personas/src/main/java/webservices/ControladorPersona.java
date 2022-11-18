@@ -5,6 +5,8 @@ import java.util.List;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.HEAD;
+import javax.ws.rs.OPTIONS;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
@@ -155,5 +157,16 @@ public class ControladorPersona {
 		}else {
 			return Response.status(Response.Status.NOT_FOUND).build();
 		}
+	}
+	
+	@OPTIONS
+	@Produces({"text/plain"})
+	public String optionPeticion() {
+		String s =  "Metodos soportados";
+		s += "/personas({id} GET -> Solicitar la persona:";
+		s += " 200 -> exista la persona";
+		s += " 404 -> no existe la persona";
+		s += " (ponemos el resto de metodos soportados)";
+		return s;
 	}
 }
