@@ -210,6 +210,13 @@ todo si queréis dentro del controlador.
 
 Si queréis hacer todos los metodos por probar, hacerlo (GET, POST, PUT, DELETE)
 
+Ejercicio 21
+------------
+
+1. Replicar el ejemplo de EJB de hola mundo.
+
+2. Intentar meter un metodo más en el EJB que sume dos numeros pasados por parametro.
+
 
 
 

@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>es.curso</groupId>
+  <artifactId>_37_ClienteEJB</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+	<properties>
+		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+	</properties>
+
+	<!-- 
+		Necesitamos las siguientes librerías para poder acceder al un EJB 
+		Estas librerías contienen clases para realizar las conexiones al
+		servidor, al JNDI, etc.
+	-->
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.wildfly/wildfly-ejb-client-bom -->
+		<dependency>
+			<groupId>org.wildfly</groupId>
+			<artifactId>wildfly-ejb-client-bom</artifactId>
+			<version>23.0.2.Final</version>
+			<type>pom</type>
+		</dependency>
+	</dependencies>
+</project>
