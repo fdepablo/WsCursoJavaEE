@@ -1,6 +1,6 @@
 # EJB
 
-El objetivo de los EJBs es centralizar la lógica de negocio que hay dentro de un servidor de aplicaciones. Por ejemplo, si tenemos muchas aplicaciones que piden un sistema de logeo, podemos centralizar todas las peticiones a la BBDD en un mismo EJB, en vez de tenerlo separado en todas las aplicaciones.
+El objetivo de los EJBs es centralizar la lógica de negocio que hay dentro de un servidor de aplicaciones. Por ejemplo, si tenemos muchas aplicaciones que piden un sistema de logeo, podemos centralizar todas las peticiones a la BBDD en un mismo EJB, en vez de tenerlo separado en todas las aplicaciones. También tienen como objetivo gestionar la transaccionalidad de una aplicación, es decir, que se ejecuten varias modificaciones a la BBDD de manera atómica (como si fuera una única modificación),
 
 Normalmente los EJB van dentro de un fichero **.ear**. Un fichero "ear" puede tener **.war** y **.jar**. Los EJB son proyectos que se convierten en ficheros **.jar**.
 
