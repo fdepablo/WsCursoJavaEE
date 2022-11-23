@@ -217,6 +217,13 @@ Ejercicio 21
 
 2. Intentar meter un metodo más en el EJB que sume dos numeros pasados por parametro.
 
+Ejercicio 22
+------------
+
+Hacer un proyecto web en el crearemos una pagina web mediante javascript que hagamos un formulario sencillo
+que tenga 2 input text y un boton de envio. Simulando un formulario de usuario y contraseña.
+
+Meter una función en el boton que diga mensaje enviado por consola. La función tiene que estar en un fichero.js aparte
 
 
 

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion a eventos</title>
+    <script>
+        //Esta función solo se ejecutará cuando la invoquemos
+        function copiarTexto(){
+            // Debemos tener claro, que una página HTML se convierte en el navegador en un 
+            // árbol DOM en el que todas las etiquetas HTML se convierten a objetos
+
+            // Con JS podemos manipular dicho árbol y cambiarlo a nuestro antojo
+            // Para acceder a un nodo del árbol DOM podemos utilizar funciones del objeto
+            // "document" que sería el elemento nodo padre de todo HTML (ver img/dom.png)
+
+            // En JS normalmente podemos obtener los objetos JS (que se crean en el árbol dom)
+            // mediante la función document.getElementById(ID_ELEMENTO)
+
+            // Si nos fijamos, nosotros en ningún momento hemos creado los objetos que hay en el
+            // árbol dom, pero podemos acceder a ellos. Este concepto está muy extendido en POO
+            // y se llama inversión de control (IoC), el cual nosotros como programadores NO
+            // creamos los objetos, pero los podemos usar y cambiar su estado
+
+            let referenciaCampo1 = document.getElementById("campo1")
+
+            // Una vez que tengamos referenciado al objeto, podemos acceder o modificar sus propiedades
+
+            // Con la propiedad ‘value’, accedemos a el valor del nodo. Nótese que podemos
+            // acceder a todas las propiedades del objeto según su nombre.
+            let valueCampo1 = referenciaCampo1.value
+
+            // A parte de acceder a los valores, también podemos cambiarlos con la misma idea
+
+            let referenciaCampo2 = document.getElementById("campo2")
+            referenciaCampo2.value = valueCampo1
+            //referenciaCampo2.type = "password"
+        }
+
+        /*
+            Con esta función borramos el valor del texto del campo2
+        */
+        function borrarTexto(){
+            // IMPORTANTE: Desde las últimas versiones de JS los navegadores crean
+            // automáticamente referencias a los objetos a partir de su atributo "id"
+            // Es decir, nosotros vamos a tener por cada elemento con id en nuestro HTML
+            // una referencia creada a dicho elemento, cuyo nombre será su id.
+
+            // Por ejemplo, ya no es necesario utilizar la función "document.getElementById" 
+            // podemos usar directamente la variable con su id que el navegador ha creado
+            // por nosotros.
+            // let campo2 = document.getElementById("campo2")
+             campo2.value = ""
+        }
+
+        /**
+            Cambiamos aleatoriamente el color del body
+        */
+        function cambiarColorBody(){
+            // Creamos aleatoriamente números entre el 0 y el 255 para asignarlo como colores
+            // Simulando la creacion de un color RGB
+            let rojo = Math.round(Math.random() * 255); 
+            let verde = Math.round(Math.random() * 255); 
+            let azul = Math.round(Math.random() * 255); 
+
+            // la función ‘rbg’ nos permite cambiar los colores de un elemento
+            let color = `rgb(${rojo},${verde},${azul})`//rgb(123,213,212)
+
+            // Para acceder al ‘body’ no hace falta que sea por id, accedemos a la 
+            // propiedad backgroundColor dentro de la propiedad style
+            document.body.style.backgroundColor = color
+        }
+
+        function sumar(){
+            //Todas las entradas de campos de texto (no importa que sean de tipo number)
+            //son cadenas, por lo tanto, debemos de convertir el valor a el tipo que 
+            //necesitemos. En este caso tenemos que convertirlo a un numero
+
+            //esto concatena el numero del campo3 con el valor del campo4
+            //let resultado = campo3.value + campo3.value 
+            
+            // Convertimos el valor del campo3 a tipo numérico
+            let numero1 = parseInt(campo3.value)
+            let numero2 = parseInt(campo4.value)
+            let resultado = numero1 + numero2;
+            campo5.value = resultado
+        }
+
+    </script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Introducción a evento en JavaSctipt</h1>
+
+        Introduce un texto: <input id="campo1" type="text" value="Este seria el valor"/> 
+        <!-- Tenemos dos maneras de hacer botones
+            1- Mediante la etiqueta input type="button"
+            2- Mediante al etiqueta button
+
+            Para desencadenar un evento, debemos de poner que evento queremos desencadenar
+            en el elemento HTML y su función asociada
+
+            Tenemos varios eventos, por ejemplo "onclick" que cuando hagamos click sobre
+            el elemento html, ejecutaremos una función
+        -->
+        <button onclick="copiarTexto()">Púlsame para copiar el texto</button>
+        <br/>
+        <!-- 
+            Existen muchos eventos, por ejemplo, cuando pasamos el ratón por encima
+            del elemento ejecutamos "copiarTexto()" y cuando salimos ejecutamos "borrarTexto()"
+        
+            Con display: inline-block; hacemos que el borde del elemento no ocupe todo el ancho, 
+            sino que se ajuste al texto de dentro
+
+            Ponemos también un ‘border’ para ver la caja del elemento P
+        -->
+        <p style="display: inline-block;border: 1px solid blue" 
+            onmouseover="copiarTexto()" 
+            onmouseout="borrarTexto()">Pásame por encima :)</p>
+        <br/>
+        Texto resultante: <input id="campo2" type="text">
+
+        <br/><br/>
+        <button onclick="cambiarColorBody()">Púlsame para cambiar de color</button>
+
+        <br/><br/>
+        Numero 1: <input id="campo3" type="number" name="numero1">
+        <br/>
+        Numero 2: <input id="campo4" type="number">
+        <br/><br/>
+        <button onclick="sumar()">Púlsame para sumar</button>
+        <br/><br/>
+        Suma resultante: <input id="campo5" type="number">
+    </div>
+ </body>
+</html>

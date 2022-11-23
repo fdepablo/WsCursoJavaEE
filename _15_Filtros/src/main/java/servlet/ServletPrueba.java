@@ -22,6 +22,13 @@ public class ServletPrueba extends HttpServlet {
 		//Si no existieran los filtros, tendria que tomar el tiempo en TODOS
 		//los servlets antes y despues para sacar el tiempo de procesamiento
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		/*
+		var variable = "cadena";//inferencia de tipos, java 9 0 10
+		//variable = 56;
+		variable.toString();
+		
+		var writer = response.getWriter();
+		writer.append("");*/
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

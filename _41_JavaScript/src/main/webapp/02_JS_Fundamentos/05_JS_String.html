@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Strings</title>
+    <script type="text/javascript">
+        //Los String en JS son objetos y como tales tienen atributos y 
+        //funciones. Van entre comillas dobles o simples
+        let texto = "Esto es una cadena de caracteres";
+
+        //Algunas funciones
+        //length - Nos devuelve la longitud de la cadena
+        console.log(texto.length); //32
+
+        //toUpperCase - Nos devuelve la cadena en mayúsculas
+        //Cuidado! las cadenas de texto en JS son inmutables (como en java)
+        //El concepto de inmutabilidad dice que una vez creado un objeto su estado no puede cambiar
+        //nunca, permanece inmutable en el tiempo. El estado de un objeto es el valor de sus 
+        //atributos
+        texto.toUpperCase();
+        console.log(texto); //Aquí la cadena sigue siendo en minúsculas, la cadena inicial no cambia
+
+        console.log("===================================");
+        let texto2 = texto.toUpperCase();//los métodos de String te devuelven una cadena resultante
+        console.log(texto2);
+    
+        //charAt - Acceder a un carácter a partir de un índice
+        console.log("====================================");
+        console.log("CharAt:"+texto.charAt(10));// devuelve 'a'
+        
+        /* INDEXOF - Devuelve la primera posición de un carácter */
+        var mensaje = "Hola";
+        var posicion = mensaje.indexOf('a'); // posicion = 3
+        posicion = mensaje.indexOf('b');     // posicion = -1
+
+        /* TRIM - Elimina espacios en blanco finales e iniciales*/
+        var mensaje = "  Hola        ";
+        var sinEspacios = mensaje.trim();
+        console.log(sinEspacios)//"Hola"
+        
+        /* SUBSTRING - obtener una subcadena a partir de una cadena */
+        var mensaje = "Hola usuario";
+        //Si le pasamos un solo argumento, nos devuelve desde esa posición hasta el final de la cadena
+        var porcion = mensaje.substring(2); // porcion = "la usuario"
+        porcion = mensaje.substring(5);     // porcion = "usuario"
+        porcion = mensaje.substring(7);     // porcion = "uario" 
+
+        //Si le pasamos dos valores, nos devuelve desde el primer valor (INCLUIDO) 
+        //hasta el último valor (SIN INCLUIR)
+        var porcion = mensaje.substring(0, 5);     // porcion = "Hola "
+        console.log("porción: " + porcion)
+
+        //Split - Divide una cadena por el caracter que le pasemos
+        let trozos = texto.split(" "); //Trozos es un array con los fragmentos
+        console.log("**** Split ****")
+        for(trozo of trozos){
+            console.log(trozo);
+        }
+    </script>
+</head>
+<body>
+    <h1> Strings!! Pulsa F12 para ver la consola</h1>
+</body>
+    
+</html>

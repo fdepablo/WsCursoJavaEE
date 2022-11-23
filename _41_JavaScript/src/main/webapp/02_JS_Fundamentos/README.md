@@ -1,0 +1,2 @@
+
+Pulsando F12 sobre un navegador Chrome se pueden acceder a las herramientas para los desarrolladores, donde entre muchas acciones, se puede ver la consola del navegador donde veremos lo que pongamos dentro de la función **'console.log()'**

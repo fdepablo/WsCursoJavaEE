@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Script</title>
+
+	<!-- Podemos incluir JS dentro de la etiqueta <script>. Puede haber todas las etiquetas que 
+		queramos, aunque normalmente las podemos ver dentro de la etiqueta <head>
+
+		Hay que tener en cuenta que cuando se carga una página en el navegador se ejecuta línea a
+		línea, es decir, no hay una compilación previa como en otros lenguajes.
+	-->
+	<script type="text/javascript">
+		// Cuando el navegador llege a esta línea, la ejecutará
+		alert('Bienvenido!!');
+
+		//Cargamos la función saludar(), para ser usada más adelante
+		function saludar() {
+			alert("Hola Caracola!!!");
+			alert("Hola soy Spiderman");
+			console.log("Hola Capitan America!!")
+		}
+	</script>
+</head>
+<body>
+	<h1>Bienvenido Usuario!</h1>
+	<h1 onclick="saludar()">Pulsame para saludar</h1>	
+</body>
+</html>
