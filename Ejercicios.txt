@@ -225,5 +225,11 @@ que tenga 2 input text y un boton de envio. Simulando un formulario de usuario y
 
 Meter una función en el boton que diga mensaje enviado por consola. La función tiene que estar en un fichero.js aparte
 
+Ejercicio 23
+------------
+
+Formulario con HTML y JS que calcule las siguiente operaciones: Suma, resta, division y multiplicación de 2 numeros. 
+Potencia de un numero, el diametro de una circunferencia.
+
 
 

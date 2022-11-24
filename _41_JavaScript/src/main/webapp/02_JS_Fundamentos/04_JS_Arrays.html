@@ -4,17 +4,17 @@
     <meta charset="ISO-8859-1">
     <title>Arrays</title>
     <script type="text/javascript">
-        //Los arrays son una colección ordenada de elementos
+        //Los arrays son una colecci�n ordenada de elementos
         //los arrays en JS SON OBJETOS
 
         //Hay varias maneras de crear arrays en JS
-        let array1 = []//array vacío
+        let array1 = []//array vac�o
         let array2 = [1,2,3,4,5]//array con datos
         //Esta es la manera de inicializar, pero luego podemos agregar todos
         //los elementos que queramos.
 
         //los arrays pueden tener cualquier valor
-        let array3 = [1,2,3,4,5,true,"pepe",null]
+        let array3 = [1,2,3,4,5,true,"pepe",null, new Date()]
 
         //Los arrays en JS se pueden usar de 2 maneras diferentes
         //1- Manera indexada -> Array de elementos ordenados, tienen un índice y un valor
@@ -111,7 +111,7 @@
         //ESTRUCTURA FOR-IN, ideal para recorrer índices o claves de un array
         console.log("FOR IN: Array indexado")
         for (let indice in dias) {
-            console.log(dias[indice]);//Mostraría los días de la semana
+            console.log("indice: " + indice + " valor: " + dias[indice]);//Mostraría los días de la semana
         }
 
         console.log("FOR IN: Array asociativo")
@@ -134,7 +134,7 @@
         console.log("----------- ARRAYS ASOCIATIVOS (OBJETOS) ----------------")
         let persona = []
         persona["nombre"] = "Oliver Atom"
-        persona["pais"] = "Japón"
+        persona["pais"] = "Jap�n"
         persona["telefono"] = "555445678"
 
         //Accedemos a los valores través de la clave
@@ -156,7 +156,7 @@
 
         //También podemos trabajar con notación JSON 
         let pelicula = {
-            titulo : "Avenger: End Game",
+            "titulo" : "Avenger: End Game",
             directores : "Anthony y Joe Russo",
             anio : 1999
         }
@@ -171,14 +171,32 @@
             nombre : "Bender Bending Rodriguez",
             direccion : "NYC",
             saludar : function(){
-                console.log("Besa mi brillante carcasa metálica")
-            }
+                console.log(cliente.nombre + " : Besa mi brillante carcasa met�lica")
+            },
+            saludarConNombre : function (nombre) {
+            	console.log("Besa mi brillante carcasa met�lica, tu: " + nombre)
+			}
         }
 
         console.log(cliente.nombre)
         console.log(cliente.direccion)
         console.log(cliente.saludar)//Así no se ejecuta el método, te imprime la función
-        cliente.saludar()//Con paréntesis ejecutaríamos la función        
+        cliente.saludar()//Con paréntesis ejecutaríamos la función  
+        cliente.saludarConNombre("Pepe")      
+        
+        let cliente2 = {
+           nombre : "Homer simpson",
+           direccion : "Springfield",
+           saludar : function(){
+               console.log(cliente2.nombre + " : Besa mi brillante carcasa met�lica")
+           },
+           saludarConNombre : function (nombre) {
+           	console.log("Besa mi brillante carcasa met�lica, tu: " + nombre)
+		    }
+        }
+        
+      	cliente2.saludar()
+    
     </script>
 </head>
 <body>

@@ -33,6 +33,8 @@ public class MainInterfaces {
 		
 		System.out.println(a1.getPosicion());
 		System.out.println(c1.getPosicion());
+		
+		listaMovibles.forEach(v -> System.out.println(v));
 	}
 
 }

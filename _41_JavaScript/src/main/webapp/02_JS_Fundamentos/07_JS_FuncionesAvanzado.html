@@ -4,9 +4,10 @@
 	<meta charset="ISO-8859-1">
 	<title>Funciones avanzadas</title>
 	<script type="text/javascript">
+		//JS es un lengueje funcional!!
 		//Algunas peculiaridades de JS, podemos tener funciones dentro de funciones
 		function imprimir(pelicula){
-			//podemos tener funciones anidadas
+			//podemos tener funciones anidadas (closures)
 			function imprimirPorConsola(pelicula){
 				console.log(pelicula)
 			}
@@ -15,23 +16,36 @@
 				//codigo necesario para imprimir en html
 			}
 
-			imprimirPorConsola(pelicula)	
+			imprimirPorConsola(pelicula)
+			imprimirPorDivHtml(pelicula)	
 		}
 
 		imprimir("Harry poter eh el prisionero de hazcabal")
 
+		console.log("Declarando una funcion como objeto")
 		//como las funciones son objetos podemos
 		//hacer cositas asin
-		let multiplicar = function(m1,m2){
+		let multiplicar = function (m1,m2){
 			return m1 * m2
 		}
 
 		console.log(multiplicar(4,2))
 		console.log(multiplicar(3,6))
+		
+		console.log("Declarando una funcion como funcion flecha")
+		//Se pueden simplificar con las funciones flecha
+		//Java -> funciones lambda
+		let multiplicarConFlecha = (m1,m2) => {
+			return m1 * m2
+		} 
+
+		console.log(multiplicarConFlecha(4,6))
+		console.log(multiplicarConFlecha(9,8))
 
 		console.log("=========================")
 		function crearDocumento(datos,funcion){
 			console.log("Creando documento")
+			
 			/*
 			if(tipoDoc == "factura"){
 				//codigo necesario para crear una
@@ -53,8 +67,14 @@
 			return ("Pedido-1: " + cuerpo)
 		}
 
+		let funcionFlecha = (cuerpo) => {
+			console.log("Creando codigo para la función flecha")
+			return ("Flecha-1: " + cuerpo)
+		}
+
 		crearDocumento("Datos1", crearCodigoFactura)
 		crearDocumento("Datos2", crearCodigoPedido)
+		crearDocumento("Datos3", funcionFlecha)
 
 		//Usando el objeto Function
 		var miFuncion = new Function("a", "b", "return a+b;");

@@ -1,5 +1,3 @@
-![JavaScript](img/js.png "Aprende JavaScript!!")
-
 # JavaScript (JS)
 
 - JS empezó siendo un lenguaje de programación de entorno cliente, es decir, se ejecutaba solamente en los navegadores. Desde hace unos años, JavaScript es usado tanto en el lado cliente (Navegadores) como en el lado del servidor (Node o MongoDB).

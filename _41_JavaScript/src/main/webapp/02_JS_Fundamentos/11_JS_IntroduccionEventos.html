@@ -50,7 +50,7 @@
             // Por ejemplo, ya no es necesario utilizar la función "document.getElementById" 
             // podemos usar directamente la variable con su id que el navegador ha creado
             // por nosotros.
-            // let campo2 = document.getElementById("campo2")
+            //let campo2 = document.getElementById("campo2")
              campo2.value = ""
         }
 
@@ -60,9 +60,9 @@
         function cambiarColorBody(){
             // Creamos aleatoriamente números entre el 0 y el 255 para asignarlo como colores
             // Simulando la creacion de un color RGB
-            let rojo = Math.round(Math.random() * 255); 
-            let verde = Math.round(Math.random() * 255); 
-            let azul = Math.round(Math.random() * 255); 
+            let rojo = Math.round(Math.random() * 256); 
+            let verde = Math.round(Math.random() * 256); 
+            let azul = Math.round(Math.random() * 256); 
 
             // la función ‘rbg’ nos permite cambiar los colores de un elemento
             let color = `rgb(${rojo},${verde},${azul})`//rgb(123,213,212)
