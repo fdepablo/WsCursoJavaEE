@@ -231,5 +231,8 @@ Ejercicio 23
 Formulario con HTML y JS que calcule las siguiente operaciones: Suma, resta, division y multiplicación de 2 numeros. 
 Potencia de un numero, el diametro de una circunferencia.
 
+Ejericio 24
+-----------
 
+Hacer un boton en JS que cuando lo pulsemo cree botones. Tendremos otro boton, que cuando lo pulsemos eliminaremos botones
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clases</title>
     <script>
-        //Las últimas versiones de JS permiten trabajar con clases
+        //Las últimas versiones de JS(Version 6) permiten trabajar con clases
         //Las clases sirven como molde para crear objetos.
         class Persona {
 
@@ -118,6 +118,7 @@
 
         //Otro ejemplo de creación de objetos
         class Pelicula {
+
             //También podemos crear los atributos dentro del constructor
             constructor(titulo, director) {
                 this.titulo = titulo;
@@ -160,6 +161,13 @@
         //El tipo de la variable empleado es también "object"
         console.log("El tipo de la variable empleado1 es: " + typeof (empleado1));
         console.log(empleado1);
+        //Podemos usar la palabra reservada instanceof para preguntar si una variable
+        //esta apuntando a un tipo especifico de dato
+        if(empleado1 instanceof Empleado){
+			console.log("Empleado1 es de tipo empleado")
+        }else{
+			console.log("Empleado1 es de otro tipo de dato")
+        }
     </script>
 </head>
 <body>
