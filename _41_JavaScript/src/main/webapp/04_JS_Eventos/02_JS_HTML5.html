@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<!-- 
+	HTML5 establece que demos de separar el JS, del CSS del HTML.
+	EL JS debe de ir en un fichero aparte y agregar los eventos mediante
+	el DOM (manejadores semanticos)
+ -->
+ 	<link rel="stylesheet" href="css/estilos.css">
+ 	<script type="text/javascript" src="js/funcionalidadMostrar.js"></script>
+ 	<!-- Mediante el atributo "defer", el navegador espera a que la página este
+ 	totalmente cargada antes de ejecutar el JS -->
+ 	<script type="text/javascript" src="js/funcionalidadSumar.js" defer="defer"></script>
+<body>
+	<h1>Bienvendios a nuestra página web</h1>
+	<button id="mostrar">Pulsa para mostrar un texto</button>
+	<br/>
+	Numero1: <input type="text" id="numero1"/><br/>
+	Numero2: <input type="text" id="numero2"><br/>
+	<button id="botonSumar">Pulsa para sumar</button><br/>
+	Resultado: <input type="text" id="resultado"><br/>
+</body>
+</html>

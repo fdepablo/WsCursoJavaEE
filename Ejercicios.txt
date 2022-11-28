@@ -236,3 +236,8 @@ Ejericio 24
 
 Hacer un boton en JS que cuando lo pulsemo cree botones. Tendremos otro boton, que cuando lo pulsemos eliminaremos botones
 
+Ejercicio 25
+------------
+Vamos a hacer el ejercicio 24 pero separando la parte de HTML, CSS y JS en ficheros diferentes. Con JS tendremos
+que usar los manejadores de eventos semanticos.
+
