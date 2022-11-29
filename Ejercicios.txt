@@ -241,3 +241,9 @@ Ejercicio 25
 Vamos a hacer el ejercicio 24 pero separando la parte de HTML, CSS y JS en ficheros diferentes. Con JS tendremos
 que usar los manejadores de eventos semanticos.
 
+Ejercicio 26
+------------
+Vamos a hacer una apliacación con ajax para mostrar una tabla con Coches que esten en memoria.
+Los coches tendran un id, una matricula, una marca y un modelo
+Cuando carguemos la página html, aparecera la página vacia con un boton para cargar la información de los coches
+del servidor en una tabla.
